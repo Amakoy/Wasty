@@ -31,7 +31,7 @@ Input data sampah,
 Menghitung beban sampah,
 Konversi beban sampah ke jumlah uang yang dibayarkan ke pengumpul sampah.
 
-![image](https://user-images.githubusercontent.com/71454818/188536356-385f895e-a4ba-4c25-861b-342cfcca6833.png)
+![image](/docs/assets/test.png)
 
 
 
