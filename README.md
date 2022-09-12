@@ -9,7 +9,7 @@ Wasty adalah aplikasi yang mendata semua informasi penukaran sampah secara digit
 
    Anggota 2 : Vallentina Wahyu Febrihartanti - 20/456851/TK/50675
    
-===========================================================================================
+==================================================================================
 
 "Junior Project TI"
 
