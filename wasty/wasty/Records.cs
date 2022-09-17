@@ -1,7 +1,6 @@
-
 namespace wasty
 {
-    class Records
+    class records
     {
         private string _recordId;
         private string _accountID;
@@ -39,5 +38,4 @@ namespace wasty
         }
 
     }
-
 }
