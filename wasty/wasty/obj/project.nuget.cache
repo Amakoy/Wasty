@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yQlbA9+iXqppC6OdM71f/mOrljT2mEafV7AoOXB9hrsuF2l/xEGCNa868Ynu8hIMSHM0mXDKXR46KNKS6iY2LQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Raisa Salsabila\\Documents\\GitHub\\Wasty\\wasty\\wasty\\wasty.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
