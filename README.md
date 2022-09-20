@@ -45,3 +45,8 @@ Membuat use-case diagram, activiity dagram, dan class diagram
 ![image](https://user-images.githubusercontent.com/71454818/189573449-83b6790b-16c8-4977-81aa-07f7ef2c56a8.png)
 ![image](https://user-images.githubusercontent.com/71454818/189573471-0300fe19-54cb-498a-9f7e-66467d062462.png)
 
+### 2. ERD
+Membuat diagram relasi entitas untuk menjelaskan hubungan antar tabel dalam database
+![image](https://user-images.githubusercontent.com/71454818/191154128-94995538-dde7-4fef-8284-dd23fdaeb699.png)
+
+
