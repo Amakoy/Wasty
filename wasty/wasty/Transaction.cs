@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace wasty
 {
     class Transaction
@@ -31,7 +35,7 @@ namespace wasty
 
         public float calculatePrice(string wasteType, float wasteWeight)
         {
-
+            return 0;
         }
     }
 }

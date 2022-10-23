@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace wasty
 {
     class records
@@ -16,7 +20,7 @@ namespace wasty
 
         public string AccountID
         {
-            get { return _accountID; }
+            get { return _accountID; }  
             set { _accountID = value; }
         }
         public DateTime Date
@@ -35,6 +39,7 @@ namespace wasty
         {
             get { return _totalPrice; }
             set { _totalPrice = value; }
+        }
     }
 
 }
