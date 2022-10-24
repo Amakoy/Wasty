@@ -13,3 +13,4 @@ C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\Debug\netcoreapp
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.dll
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.pdb
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.genruntimeconfig.cache
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.LoginPage.resources
