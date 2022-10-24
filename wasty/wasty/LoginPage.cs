@@ -53,5 +53,26 @@ namespace wasty
                 Application.Exit();
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (tbUsername.Text == "" || tbPassword.Text == "")
+            {
+                MessageBox.Show("Masukkan Username and Password");
+            }
+            else
+            {
+                if (tbUsername.Text == "admin" && tbPassword.Text == "admin")
+                {
+                    AddWaste addWst = new AddWaste();
+                    addWst.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password salah");
+                }
+            }
+        }
     }
 }
