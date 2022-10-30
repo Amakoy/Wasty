@@ -17,3 +17,5 @@ C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.AddTransaction.resources
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.Properties.Resources.resources
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.ShowRecords.resources
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.AddCustomer.resources
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.HomePage.resources
