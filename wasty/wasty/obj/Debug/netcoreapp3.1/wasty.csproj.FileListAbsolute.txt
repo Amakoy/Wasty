@@ -14,3 +14,6 @@ C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.pdb
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.genruntimeconfig.cache
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.LoginPage.resources
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.AddTransaction.resources
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.Properties.Resources.resources
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.ShowRecords.resources
