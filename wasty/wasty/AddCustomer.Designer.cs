@@ -30,12 +30,8 @@ namespace wasty
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnTambah;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRecords = new System.Windows.Forms.Button();
-            this.btnAddWaste = new System.Windows.Forms.Button();
-            this.btnCustomers = new System.Windows.Forms.Button();
-            this.btnTransaction = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.lblJudul = new System.Windows.Forms.Label();
             this.lblHp = new System.Windows.Forms.Label();
             this.lblJenis = new System.Windows.Forms.Label();
@@ -44,98 +40,62 @@ namespace wasty
             this.tbHp = new System.Windows.Forms.TextBox();
             this.tbNama = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             btnTambah = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnTambah
+            // 
+            btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnTambah.ForeColor = System.Drawing.Color.White;
+            btnTambah.Location = new System.Drawing.Point(199, 346);
+            btnTambah.Margin = new System.Windows.Forms.Padding(2);
+            btnTambah.Name = "btnTambah";
+            btnTambah.Size = new System.Drawing.Size(162, 33);
+            btnTambah.TabIndex = 19;
+            btnTambah.Text = "Tambah Customer";
+            btnTambah.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.panel1.Controls.Add(this.btnRecords);
-            this.panel1.Controls.Add(this.btnAddWaste);
-            this.panel1.Controls.Add(this.btnCustomers);
-            this.panel1.Controls.Add(this.btnTransaction);
-            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Location = new System.Drawing.Point(-2, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(95, 555);
+            this.panel1.Size = new System.Drawing.Size(110, 555);
             this.panel1.TabIndex = 1;
-            // 
-            // btnRecords
-            // 
-            this.btnRecords.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecords.ForeColor = System.Drawing.Color.White;
-            this.btnRecords.Image = global::wasty.Properties.Resources.records;
-            this.btnRecords.Location = new System.Drawing.Point(3, 386);
-            this.btnRecords.Name = "btnRecords";
-            this.btnRecords.Size = new System.Drawing.Size(90, 70);
-            this.btnRecords.TabIndex = 0;
-            this.btnRecords.UseVisualStyleBackColor = true;
-            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
-            // 
-            // btnAddWaste
-            // 
-            this.btnAddWaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddWaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddWaste.ForeColor = System.Drawing.Color.White;
-            this.btnAddWaste.Image = global::wasty.Properties.Resources.add_waste;
-            this.btnAddWaste.Location = new System.Drawing.Point(3, 310);
-            this.btnAddWaste.Name = "btnAddWaste";
-            this.btnAddWaste.Size = new System.Drawing.Size(90, 70);
-            this.btnAddWaste.TabIndex = 0;
-            this.btnAddWaste.UseVisualStyleBackColor = true;
-            this.btnAddWaste.Click += new System.EventHandler(this.btnAddWaste_Click);
-            // 
-            // btnCustomers
-            // 
-            this.btnCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomers.ForeColor = System.Drawing.Color.White;
-            this.btnCustomers.Image = global::wasty.Properties.Resources.add_customers;
-            this.btnCustomers.Location = new System.Drawing.Point(3, 234);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(90, 70);
-            this.btnCustomers.TabIndex = 0;
-            this.btnCustomers.UseVisualStyleBackColor = true;
-            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
-            // 
-            // btnTransaction
-            // 
-            this.btnTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Image = global::wasty.Properties.Resources.add_transcation;
-            this.btnTransaction.Location = new System.Drawing.Point(3, 158);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(90, 70);
-            this.btnTransaction.TabIndex = 0;
-            this.btnTransaction.UseVisualStyleBackColor = true;
-            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::wasty.Properties.Resources.homepage;
-            this.btnHome.Location = new System.Drawing.Point(3, 82);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(90, 70);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblJudul
             // 
             this.lblJudul.AutoSize = true;
             this.lblJudul.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul.Location = new System.Drawing.Point(342, 57);
+            this.lblJudul.Location = new System.Drawing.Point(354, 57);
             this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(337, 50);
+            this.lblJudul.Size = new System.Drawing.Size(271, 50);
             this.lblJudul.TabIndex = 2;
-            this.lblJudul.Text = "Tambah Customer";
+            this.lblJudul.Text = "Add Customer";
             // 
             // lblHp
             // 
@@ -192,20 +152,6 @@ namespace wasty
             this.tbNama.Size = new System.Drawing.Size(281, 27);
             this.tbNama.TabIndex = 15;
             // 
-            // btnTambah
-            // 
-            btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnTambah.ForeColor = System.Drawing.Color.White;
-            btnTambah.Location = new System.Drawing.Point(199, 346);
-            btnTambah.Margin = new System.Windows.Forms.Padding(2);
-            btnTambah.Name = "btnTambah";
-            btnTambah.Size = new System.Drawing.Size(162, 33);
-            btnTambah.TabIndex = 19;
-            btnTambah.Text = "Tambah Customer";
-            btnTambah.UseVisualStyleBackColor = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -215,6 +161,86 @@ namespace wasty
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(430, 336);
             this.dataGridView1.TabIndex = 20;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(-7, 360);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(117, 84);
+            this.panel4.TabIndex = 14;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(41, 19);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(-7, 277);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(117, 84);
+            this.panel3.TabIndex = 13;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(38, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(-7, 194);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(117, 84);
+            this.panel2.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(35, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(-7, 111);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(117, 84);
+            this.panel5.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(41, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AddCustomer
             // 
@@ -237,6 +263,14 @@ namespace wasty
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddCustomer_FormClosed);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,11 +279,6 @@ namespace wasty
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRecords;
-        private System.Windows.Forms.Button btnAddWaste;
-        private System.Windows.Forms.Button btnCustomers;
-        private System.Windows.Forms.Button btnTransaction;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label lblJudul;
         private System.Windows.Forms.Label lblHp;
         private System.Windows.Forms.Label lblJenis;
@@ -258,5 +287,13 @@ namespace wasty
         private System.Windows.Forms.TextBox tbHp;
         private System.Windows.Forms.TextBox tbNama;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

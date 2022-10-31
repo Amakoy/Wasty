@@ -59,5 +59,33 @@ namespace wasty
         {
             Application.Exit();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            HomePage Home = new HomePage();
+            Home.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddTransaction AddTrans = new AddTransaction();
+            AddTrans.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ShowRecords ShowRec = new ShowRecords();
+            ShowRec.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AddWaste addWaste = new AddWaste();
+            addWaste.Show();
+            this.Hide();
+        }
     }
 }

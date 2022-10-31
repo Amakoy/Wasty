@@ -56,5 +56,33 @@ namespace wasty
             showRecords.Show();
             this.Hide();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddTransaction addTransaction = new AddTransaction();
+            addTransaction.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AddWaste addWaste = new AddWaste();
+            addWaste.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ShowRecords showRecords = new ShowRecords();
+            showRecords.Show();
+            this.Hide();
+        }
     }
 }
