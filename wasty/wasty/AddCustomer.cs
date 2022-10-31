@@ -17,7 +17,9 @@ namespace wasty
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            HomePage homePage = new HomePage();
+            homePage.Show();
+            this.Hide();
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
@@ -29,9 +31,9 @@ namespace wasty
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            AddCustomer addCustomer = new AddCustomer();
+            /*AddCustomer addCustomer = new AddCustomer();
             addCustomer.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void btnAddWaste_Click(object sender, EventArgs e)
