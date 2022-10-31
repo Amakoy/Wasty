@@ -64,8 +64,8 @@ namespace wasty
             {
                 if (tbUsername.Text == "admin" && tbPassword.Text == "admin")
                 {
-                    AddWaste addWst = new AddWaste();
-                    addWst.Show();
+                    HomePage homePage = new HomePage();
+                    homePage.Show();
                     this.Hide();
                 }
                 else
