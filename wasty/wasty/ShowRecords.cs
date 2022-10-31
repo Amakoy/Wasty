@@ -20,9 +20,45 @@ namespace wasty
 
         }
 
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            homePage.Show();
+            this.Hide();
+        }
+
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
-            Transaction transaction = new Transaction();
+            AddTransaction addTransaction = new AddTransaction();
+            addTransaction.Show();
+            this.Hide();
+        }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.Show();
+            this.Hide();
+        }
+
+        private void btnAddWaste_Click(object sender, EventArgs e)
+        {
+            AddWaste addWaste = new AddWaste();
+            addWaste.Show();
+            this.Hide();
+        }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            /*ShowRecords showRecords = new ShowRecords();
+            showRecords.Show();
+            this.Hide();*/
+        }
+
+        private void ShowRecords_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
