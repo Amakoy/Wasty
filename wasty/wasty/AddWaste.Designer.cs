@@ -31,8 +31,12 @@ namespace wasty
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWaste));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.btnLoaddata = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.lblClose = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvWaste = new System.Windows.Forms.DataGridView();
             this.tbPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbType = new System.Windows.Forms.TextBox();
@@ -47,11 +51,8 @@ namespace wasty
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWaste)).BeginInit();
             this.sidePanel.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,11 +68,12 @@ namespace wasty
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mainPanel.Controls.Add(this.button2);
+            this.mainPanel.Controls.Add(this.btnLoaddata);
+            this.mainPanel.Controls.Add(this.btnDelete);
             this.mainPanel.Controls.Add(this.btnAdd);
-            this.mainPanel.Controls.Add(this.button1);
+            this.mainPanel.Controls.Add(this.btnUpdate);
             this.mainPanel.Controls.Add(this.lblClose);
-            this.mainPanel.Controls.Add(this.dataGridView1);
+            this.mainPanel.Controls.Add(this.dgvWaste);
             this.mainPanel.Controls.Add(this.tbPrice);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.tbType);
@@ -84,6 +86,62 @@ namespace wasty
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
+            // btnLoaddata
+            // 
+            this.btnLoaddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnLoaddata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaddata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLoaddata.ForeColor = System.Drawing.Color.White;
+            this.btnLoaddata.Location = new System.Drawing.Point(892, 89);
+            this.btnLoaddata.Name = "btnLoaddata";
+            this.btnLoaddata.Size = new System.Drawing.Size(107, 40);
+            this.btnLoaddata.TabIndex = 30;
+            this.btnLoaddata.Text = "Load Data";
+            this.btnLoaddata.UseVisualStyleBackColor = false;
+            this.btnLoaddata.Click += new System.EventHandler(this.btnLoaddata_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(243, 363);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(78, 40);
+            this.btnDelete.TabIndex = 28;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(46, 363);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(95, 40);
+            this.btnAdd.TabIndex = 29;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(145, 363);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(95, 40);
+            this.btnUpdate.TabIndex = 27;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // lblClose
             // 
             this.lblClose.AutoSize = true;
@@ -95,15 +153,16 @@ namespace wasty
             this.lblClose.Text = "x";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click_1);
             // 
-            // dataGridView1
+            // dgvWaste
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(374, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(625, 426);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvWaste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWaste.Location = new System.Drawing.Point(374, 142);
+            this.dgvWaste.Name = "dgvWaste";
+            this.dgvWaste.RowHeadersWidth = 51;
+            this.dgvWaste.RowTemplate.Height = 29;
+            this.dgvWaste.Size = new System.Drawing.Size(625, 426);
+            this.dgvWaste.TabIndex = 6;
+            this.dgvWaste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellClick);
             // 
             // tbPrice
             // 
@@ -250,45 +309,6 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(243, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 40);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(46, 363);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(107, 40);
-            this.btnAdd.TabIndex = 29;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(159, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 40);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // AddWaste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -303,7 +323,7 @@ namespace wasty
             this.Load += new System.EventHandler(this.AddWaste_Load);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWaste)).EndInit();
             this.sidePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -326,7 +346,7 @@ namespace wasty
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvWaste;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
@@ -336,8 +356,9 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnLoaddata;
     }
 }

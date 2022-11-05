@@ -19,3 +19,7 @@ C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.ShowRecords.resources
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.AddCustomer.resources
 C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.HomePage.resources
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\obj\Debug\netcoreapp3.1\wasty.csproj.CopyComplete

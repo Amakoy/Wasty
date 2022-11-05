@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yQlbA9+iXqppC6OdM71f/mOrljT2mEafV7AoOXB9hrsuF2l/xEGCNa868Ynu8hIMSHM0mXDKXR46KNKS6iY2LQ==",
+  "dgSpecHash": "fgsM6hhaxHYrXkUVaJv+dqZDj4oGLA4ffLgS9t3R4OH/oNfS1HzIOjPDYpGwExkVIPh7l0vH0BAnQN+vMd7Ycg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Raisa Salsabila\\Documents\\GitHub\\Wasty\\wasty\\wasty\\wasty.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
+    "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
   "logs": []

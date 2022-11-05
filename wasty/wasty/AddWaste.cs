@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Npgsql;
 
 namespace wasty
 {
@@ -26,15 +27,19 @@ namespace wasty
         public AddWaste()
         {
             InitializeComponent();
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
+
+        private NpgsqlConnection conn;
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
+        //public static NpgsqlConnection conn = new NpgsqlConnection(connectionString: connstring);
+        public DataTable dt;
+        public static NpgsqlCommand cmd;
+        private string sql = null;
+        private DataGridViewRow r;
 
         private void AddWaste_Load(object sender, EventArgs e)
         {
-            // btnAdd Style
-            btnAdd.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnAdd.Width, btnAdd.Height, 45, 45));
-            btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.FlatAppearance.BorderSize = 0;
+            conn = new NpgsqlConnection(connstring);
 
             // text box Type Style
             tbType.BorderStyle = BorderStyle.None;
@@ -43,7 +48,6 @@ namespace wasty
             // text box Price Style
             tbPrice.BorderStyle = BorderStyle.None;
             tbPrice.AutoSize = false;
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -136,6 +140,122 @@ namespace wasty
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLoaddata_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                dgvWaste.DataSource = null;
+                sql = "select * from  st_select()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvWaste.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                sql = @"select * from st_insert(:_waste_type, :_waste_price)";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("_waste_type", tbType.Text);
+                cmd.Parameters.AddWithValue("_waste_price", tbPrice.Text);
+                if ((int)cmd.ExecuteScalar() == 1)
+                {
+                    MessageBox.Show("Data Jenis Sampah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
+                    btnLoaddata.PerformClick();
+                    tbType.Text = tbType.Text = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Add FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvWaste_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                r = dgvWaste.Rows[e.RowIndex];
+                tbType.Text = r.Cells["_waste_type"].Value.ToString();
+                tbPrice.Text = r.Cells["_waste_price"].Value.ToString();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (r == null)
+            {
+                MessageBox.Show("Mohon pilih baris data yang akan diupdate", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                conn.Open();
+                sql = @"select * from st_update(:_waste_id, :_waste_type, :_waste_price)";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("_waste_id", r.Cells["_waste_id"].Value.ToString());
+                cmd.Parameters.AddWithValue("_waste_type", tbType.Text);
+                cmd.Parameters.AddWithValue("_waste_price", tbPrice.Text);
+                if ((int)cmd.ExecuteScalar() == 1)
+                {
+                    MessageBox.Show("Data Jenis Sampah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
+                    btnLoaddata.PerformClick();
+                    tbType.Text = tbPrice.Text = null;
+                    r = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Update FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (r == null)
+            {
+                MessageBox.Show("Mohon pilih baris data yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (MessageBox.Show("Apakah benar anda ingin menghapsus data " + r.Cells["_waste_type"].Value.ToString() + " ?", "Hapus data terkonfirmasi",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+
+                try
+                {
+                    conn.Open();
+                    sql = @"select * from st_delete(:_waste_id)";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_waste_id", r.Cells["_waste_id"].Value.ToString());
+                    if ((int)cmd.ExecuteScalar() == 1)
+                    {
+                        MessageBox.Show("Data Jenis Sampah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conn.Close();
+                        btnLoaddata.PerformClick();
+                        tbType.Text = tbPrice.Text = null;
+                        r = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:" + ex.Message, "Delete FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
     }
 }
