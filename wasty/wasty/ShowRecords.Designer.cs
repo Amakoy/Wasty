@@ -153,10 +153,10 @@ namespace wasty
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.Controls.Add(this.dgvRecords);
             this.mainPanel.Controls.Add(this.lblAddSampah);
-            this.mainPanel.Location = new System.Drawing.Point(107, 0);
+            this.mainPanel.Location = new System.Drawing.Point(104, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1048, 607);
+            this.mainPanel.Size = new System.Drawing.Size(1051, 607);
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -175,7 +175,7 @@ namespace wasty
             // 
             this.lblAddSampah.AutoSize = true;
             this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAddSampah.Location = new System.Drawing.Point(298, 38);
+            this.lblAddSampah.Location = new System.Drawing.Point(335, 39);
             this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddSampah.Name = "lblAddSampah";
             this.lblAddSampah.Size = new System.Drawing.Size(314, 50);

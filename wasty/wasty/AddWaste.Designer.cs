@@ -48,6 +48,8 @@ namespace wasty
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -65,6 +67,8 @@ namespace wasty
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mainPanel.Controls.Add(this.button2);
+            this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.lblClose);
             this.mainPanel.Controls.Add(this.dataGridView1);
             this.mainPanel.Controls.Add(this.btnAdd);
@@ -74,9 +78,9 @@ namespace wasty
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mainPanel.Location = new System.Drawing.Point(110, 0);
+            this.mainPanel.Location = new System.Drawing.Point(109, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1170, 652);
+            this.mainPanel.Size = new System.Drawing.Size(1068, 609);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -107,11 +111,11 @@ namespace wasty
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(108, 364);
+            this.btnAdd.Location = new System.Drawing.Point(90, 375);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(138, 41);
+            this.btnAdd.Size = new System.Drawing.Size(185, 40);
             this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add Sampah";
+            this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -158,7 +162,7 @@ namespace wasty
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(407, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 46);
+            this.label1.Size = new System.Drawing.Size(145, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sampah";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -170,9 +174,9 @@ namespace wasty
             this.sidePanel.Controls.Add(this.panel3);
             this.sidePanel.Controls.Add(this.panel2);
             this.sidePanel.Controls.Add(this.panel1);
-            this.sidePanel.Location = new System.Drawing.Point(1, 0);
+            this.sidePanel.Location = new System.Drawing.Point(2, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(110, 1037);
+            this.sidePanel.Size = new System.Drawing.Size(110, 609);
             this.sidePanel.TabIndex = 0;
             this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
@@ -260,6 +264,32 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(90, 429);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(90, 482);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(185, 40);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // AddWaste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -308,5 +338,7 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
