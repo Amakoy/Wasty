@@ -33,7 +33,6 @@ namespace wasty
             this.mainPanel = new System.Windows.Forms.Panel();
             this.lblClose = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.tbPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbType = new System.Windows.Forms.TextBox();
@@ -48,8 +47,9 @@ namespace wasty
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -68,10 +68,10 @@ namespace wasty
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mainPanel.Controls.Add(this.button2);
+            this.mainPanel.Controls.Add(this.btnAdd);
             this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.lblClose);
             this.mainPanel.Controls.Add(this.dataGridView1);
-            this.mainPanel.Controls.Add(this.btnAdd);
             this.mainPanel.Controls.Add(this.tbPrice);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.tbType);
@@ -80,7 +80,7 @@ namespace wasty
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mainPanel.Location = new System.Drawing.Point(109, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1068, 609);
+            this.mainPanel.Size = new System.Drawing.Size(1046, 609);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -98,26 +98,12 @@ namespace wasty
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(382, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(374, 142);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(625, 426);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(90, 375);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(185, 40);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbPrice
             // 
@@ -264,31 +250,44 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(90, 429);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(90, 482);
+            this.button2.Location = new System.Drawing.Point(243, 363);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 40);
-            this.button2.TabIndex = 9;
+            this.button2.Size = new System.Drawing.Size(78, 40);
+            this.button2.TabIndex = 28;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(46, 363);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(107, 40);
+            this.btnAdd.TabIndex = 29;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(159, 363);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 40);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // AddWaste
             // 
@@ -323,7 +322,6 @@ namespace wasty
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox tbPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbType;
@@ -338,7 +336,8 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button button1;
     }
 }

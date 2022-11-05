@@ -39,12 +39,10 @@ namespace wasty
             // text box Type Style
             tbType.BorderStyle = BorderStyle.None;
             tbType.AutoSize = false;
-            tbType.Size = new Size(450, 40);
 
             // text box Price Style
             tbPrice.BorderStyle = BorderStyle.None;
             tbPrice.AutoSize = false;
-            tbPrice.Size = new Size(450, 40);
 
         }
 

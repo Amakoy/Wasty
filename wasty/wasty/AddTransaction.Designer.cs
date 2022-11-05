@@ -53,6 +53,9 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).BeginInit();
@@ -73,7 +76,7 @@ namespace wasty
             btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTotal.ForeColor = System.Drawing.Color.White;
-            btnTotal.Location = new System.Drawing.Point(94, 379);
+            btnTotal.Location = new System.Drawing.Point(105, 379);
             btnTotal.Margin = new System.Windows.Forms.Padding(2);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new System.Drawing.Size(162, 33);
@@ -84,6 +87,9 @@ namespace wasty
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
+            this.mainPanel.Controls.Add(this.button2);
+            this.mainPanel.Controls.Add(this.btnAdd);
+            this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.lblAddSampah);
             this.mainPanel.Controls.Add(this.lblTotal);
             this.mainPanel.Controls.Add(this.lblBerat);
@@ -110,7 +116,7 @@ namespace wasty
             this.lblAddSampah.Location = new System.Drawing.Point(347, 34);
             this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddSampah.Name = "lblAddSampah";
-            this.lblAddSampah.Size = new System.Drawing.Size(303, 46);
+            this.lblAddSampah.Size = new System.Drawing.Size(297, 45);
             this.lblAddSampah.TabIndex = 12;
             this.lblAddSampah.Text = "Transaksi Sampah";
             // 
@@ -172,7 +178,7 @@ namespace wasty
             this.dgvTransaksi.Name = "dgvTransaksi";
             this.dgvTransaksi.RowHeadersWidth = 62;
             this.dgvTransaksi.RowTemplate.Height = 33;
-            this.dgvTransaksi.Size = new System.Drawing.Size(611, 438);
+            this.dgvTransaksi.Size = new System.Drawing.Size(591, 438);
             this.dgvTransaksi.TabIndex = 6;
             // 
             // tbTotal
@@ -309,6 +315,45 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(40, 505);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(97, 40);
+            this.btnAdd.TabIndex = 26;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(253, 505);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 40);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(147, 505);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 40);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -363,5 +408,8 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button button1;
     }
 }

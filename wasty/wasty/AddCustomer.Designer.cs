@@ -29,7 +29,6 @@ namespace wasty
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button btnTambah;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -48,7 +47,9 @@ namespace wasty
             this.tbHp = new System.Windows.Forms.TextBox();
             this.tbNama = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            btnTambah = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -60,20 +61,6 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTambah
-            // 
-            btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnTambah.ForeColor = System.Drawing.Color.White;
-            btnTambah.Location = new System.Drawing.Point(196, 356);
-            btnTambah.Margin = new System.Windows.Forms.Padding(2);
-            btnTambah.Name = "btnTambah";
-            btnTambah.Size = new System.Drawing.Size(162, 33);
-            btnTambah.TabIndex = 19;
-            btnTambah.Text = "Tambah Customer";
-            btnTambah.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -173,7 +160,7 @@ namespace wasty
             this.lblJudul.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblJudul.Location = new System.Drawing.Point(498, 36);
             this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(157, 46);
+            this.lblJudul.Size = new System.Drawing.Size(155, 45);
             this.lblJudul.TabIndex = 2;
             this.lblJudul.Text = "Nasabah";
             // 
@@ -213,7 +200,7 @@ namespace wasty
             this.tbJenis.Location = new System.Drawing.Point(142, 310);
             this.tbJenis.Margin = new System.Windows.Forms.Padding(2);
             this.tbJenis.Name = "tbJenis";
-            this.tbJenis.Size = new System.Drawing.Size(281, 27);
+            this.tbJenis.Size = new System.Drawing.Size(310, 27);
             this.tbJenis.TabIndex = 18;
             // 
             // tbHp
@@ -221,7 +208,7 @@ namespace wasty
             this.tbHp.Location = new System.Drawing.Point(142, 246);
             this.tbHp.Margin = new System.Windows.Forms.Padding(2);
             this.tbHp.Name = "tbHp";
-            this.tbHp.Size = new System.Drawing.Size(281, 27);
+            this.tbHp.Size = new System.Drawing.Size(310, 27);
             this.tbHp.TabIndex = 16;
             // 
             // tbNama
@@ -229,7 +216,7 @@ namespace wasty
             this.tbNama.Location = new System.Drawing.Point(142, 185);
             this.tbNama.Margin = new System.Windows.Forms.Padding(2);
             this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(281, 27);
+            this.tbNama.Size = new System.Drawing.Size(310, 27);
             this.tbNama.TabIndex = 15;
             // 
             // dataGridView1
@@ -242,14 +229,55 @@ namespace wasty
             this.dataGridView1.Size = new System.Drawing.Size(625, 426);
             this.dataGridView1.TabIndex = 20;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(368, 360);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 40);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(142, 360);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(107, 40);
+            this.btnAdd.TabIndex = 32;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(255, 360);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 40);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1152, 605);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(btnTambah);
             this.Controls.Add(this.tbJenis);
             this.Controls.Add(this.tbHp);
             this.Controls.Add(this.tbNama);
@@ -296,5 +324,8 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button button1;
     }
 }
