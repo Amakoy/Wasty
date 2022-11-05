@@ -48,9 +48,9 @@ namespace wasty
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             btnTotal = new System.Windows.Forms.Button();
@@ -60,9 +60,9 @@ namespace wasty
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +73,7 @@ namespace wasty
             btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTotal.ForeColor = System.Drawing.Color.White;
-            btnTotal.Location = new System.Drawing.Point(125, 382);
+            btnTotal.Location = new System.Drawing.Point(94, 379);
             btnTotal.Margin = new System.Windows.Forms.Padding(2);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new System.Drawing.Size(162, 33);
@@ -97,28 +97,28 @@ namespace wasty
             this.mainPanel.Controls.Add(this.tbBerat);
             this.mainPanel.Controls.Add(this.tbHp);
             this.mainPanel.Controls.Add(this.tbTanggal);
-            this.mainPanel.Location = new System.Drawing.Point(66, 0);
+            this.mainPanel.Location = new System.Drawing.Point(106, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(895, 542);
+            this.mainPanel.Size = new System.Drawing.Size(1053, 610);
             this.mainPanel.TabIndex = 0;
             // 
             // lblAddSampah
             // 
             this.lblAddSampah.AutoSize = true;
-            this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAddSampah.Location = new System.Drawing.Point(226, 50);
+            this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAddSampah.Location = new System.Drawing.Point(347, 34);
             this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddSampah.Name = "lblAddSampah";
-            this.lblAddSampah.Size = new System.Drawing.Size(414, 50);
+            this.lblAddSampah.Size = new System.Drawing.Size(303, 46);
             this.lblAddSampah.TabIndex = 12;
-            this.lblAddSampah.Text = "Add Transaksi Sampah";
+            this.lblAddSampah.Text = "Transaksi Sampah";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotal.Location = new System.Drawing.Point(71, 437);
+            this.lblTotal.Location = new System.Drawing.Point(40, 434);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(97, 20);
             this.lblTotal.TabIndex = 11;
@@ -128,7 +128,7 @@ namespace wasty
             // 
             this.lblBerat.AutoSize = true;
             this.lblBerat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBerat.Location = new System.Drawing.Point(71, 319);
+            this.lblBerat.Location = new System.Drawing.Point(40, 316);
             this.lblBerat.Name = "lblBerat";
             this.lblBerat.Size = new System.Drawing.Size(116, 20);
             this.lblBerat.TabIndex = 10;
@@ -138,7 +138,7 @@ namespace wasty
             // 
             this.lblHp.AutoSize = true;
             this.lblHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHp.Location = new System.Drawing.Point(71, 190);
+            this.lblHp.Location = new System.Drawing.Point(40, 187);
             this.lblHp.Name = "lblHp";
             this.lblHp.Size = new System.Drawing.Size(88, 20);
             this.lblHp.TabIndex = 9;
@@ -148,7 +148,7 @@ namespace wasty
             // 
             this.lblJenis.AutoSize = true;
             this.lblJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJenis.Location = new System.Drawing.Point(71, 254);
+            this.lblJenis.Location = new System.Drawing.Point(40, 251);
             this.lblJenis.Name = "lblJenis";
             this.lblJenis.Size = new System.Drawing.Size(115, 20);
             this.lblJenis.TabIndex = 8;
@@ -158,7 +158,7 @@ namespace wasty
             // 
             this.lbTanggal.AutoSize = true;
             this.lbTanggal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTanggal.Location = new System.Drawing.Point(71, 130);
+            this.lbTanggal.Location = new System.Drawing.Point(40, 127);
             this.lbTanggal.Name = "lbTanggal";
             this.lbTanggal.Size = new System.Drawing.Size(68, 20);
             this.lbTanggal.TabIndex = 7;
@@ -167,52 +167,52 @@ namespace wasty
             // dgvTransaksi
             // 
             this.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaksi.Location = new System.Drawing.Point(460, 134);
+            this.dgvTransaksi.Location = new System.Drawing.Point(404, 134);
             this.dgvTransaksi.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTransaksi.Name = "dgvTransaksi";
             this.dgvTransaksi.RowHeadersWidth = 62;
             this.dgvTransaksi.RowTemplate.Height = 33;
-            this.dgvTransaksi.Size = new System.Drawing.Size(386, 350);
+            this.dgvTransaksi.Size = new System.Drawing.Size(611, 438);
             this.dgvTransaksi.TabIndex = 6;
             // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(71, 459);
+            this.tbTotal.Location = new System.Drawing.Point(40, 456);
             this.tbTotal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTotal.Name = "tbTotal";
-            this.tbTotal.Size = new System.Drawing.Size(281, 27);
+            this.tbTotal.Size = new System.Drawing.Size(310, 27);
             this.tbTotal.TabIndex = 4;
             // 
             // tbJenis
             // 
-            this.tbJenis.Location = new System.Drawing.Point(71, 277);
+            this.tbJenis.Location = new System.Drawing.Point(40, 274);
             this.tbJenis.Margin = new System.Windows.Forms.Padding(2);
             this.tbJenis.Name = "tbJenis";
-            this.tbJenis.Size = new System.Drawing.Size(281, 27);
+            this.tbJenis.Size = new System.Drawing.Size(310, 27);
             this.tbJenis.TabIndex = 3;
             // 
             // tbBerat
             // 
-            this.tbBerat.Location = new System.Drawing.Point(71, 342);
+            this.tbBerat.Location = new System.Drawing.Point(40, 339);
             this.tbBerat.Margin = new System.Windows.Forms.Padding(2);
             this.tbBerat.Name = "tbBerat";
-            this.tbBerat.Size = new System.Drawing.Size(281, 27);
+            this.tbBerat.Size = new System.Drawing.Size(310, 27);
             this.tbBerat.TabIndex = 2;
             // 
             // tbHp
             // 
-            this.tbHp.Location = new System.Drawing.Point(71, 213);
+            this.tbHp.Location = new System.Drawing.Point(40, 210);
             this.tbHp.Margin = new System.Windows.Forms.Padding(2);
             this.tbHp.Name = "tbHp";
-            this.tbHp.Size = new System.Drawing.Size(281, 27);
+            this.tbHp.Size = new System.Drawing.Size(310, 27);
             this.tbHp.TabIndex = 1;
             // 
             // tbTanggal
             // 
-            this.tbTanggal.Location = new System.Drawing.Point(71, 152);
+            this.tbTanggal.Location = new System.Drawing.Point(40, 149);
             this.tbTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTanggal.Name = "tbTanggal";
-            this.tbTanggal.Size = new System.Drawing.Size(281, 27);
+            this.tbTanggal.Size = new System.Drawing.Size(310, 27);
             this.tbTanggal.TabIndex = 0;
             // 
             // sidePanel
@@ -225,7 +225,7 @@ namespace wasty
             this.sidePanel.Location = new System.Drawing.Point(-1, -5);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(110, 553);
+            this.sidePanel.Size = new System.Drawing.Size(110, 615);
             this.sidePanel.TabIndex = 1;
             this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
@@ -258,26 +258,6 @@ namespace wasty
             this.panel3.Size = new System.Drawing.Size(117, 84);
             this.panel3.TabIndex = 13;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(37, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(-7, 219);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(117, 84);
-            this.panel2.TabIndex = 12;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -288,6 +268,26 @@ namespace wasty
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(-7, 219);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(117, 84);
+            this.panel2.TabIndex = 12;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(37, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel1
             // 
@@ -313,11 +313,12 @@ namespace wasty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 542);
+            this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.mainPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddTransaction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTransaction";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTransaction_FormClosed);
             this.Load += new System.EventHandler(this.AddTransaction_Load);
@@ -328,9 +329,9 @@ namespace wasty
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

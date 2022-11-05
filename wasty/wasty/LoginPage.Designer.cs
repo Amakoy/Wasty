@@ -49,26 +49,26 @@ namespace wasty
             this.sidePanel.Controls.Add(this.lblWasty);
             this.sidePanel.Location = new System.Drawing.Point(-1, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(516, 891);
+            this.sidePanel.Size = new System.Drawing.Size(429, 606);
             this.sidePanel.TabIndex = 1;
             // 
             // lblBestie
             // 
             this.lblBestie.AutoSize = true;
-            this.lblBestie.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBestie.Location = new System.Drawing.Point(90, 434);
+            this.lblBestie.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBestie.Location = new System.Drawing.Point(96, 285);
             this.lblBestie.Name = "lblBestie";
-            this.lblBestie.Size = new System.Drawing.Size(318, 133);
+            this.lblBestie.Size = new System.Drawing.Size(191, 81);
             this.lblBestie.TabIndex = 2;
             this.lblBestie.Text = "Bestie";
             // 
             // lblWasty
             // 
             this.lblWasty.AutoSize = true;
-            this.lblWasty.Font = new System.Drawing.Font("Segoe UI Semibold", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblWasty.Location = new System.Drawing.Point(87, 301);
+            this.lblWasty.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblWasty.Location = new System.Drawing.Point(59, 179);
             this.lblWasty.Name = "lblWasty";
-            this.lblWasty.Size = new System.Drawing.Size(332, 133);
+            this.lblWasty.Size = new System.Drawing.Size(274, 106);
             this.lblWasty.TabIndex = 1;
             this.lblWasty.Text = "Wasty";
             // 
@@ -82,9 +82,9 @@ namespace wasty
             this.mainPanel.Controls.Add(this.btnLogin);
             this.mainPanel.Controls.Add(this.tbUsername);
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mainPanel.Location = new System.Drawing.Point(514, 0);
+            this.mainPanel.Location = new System.Drawing.Point(424, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1251, 891);
+            this.mainPanel.Size = new System.Drawing.Size(731, 606);
             this.mainPanel.TabIndex = 2;
             // 
             // lblClose
@@ -101,10 +101,10 @@ namespace wasty
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDesc.Location = new System.Drawing.Point(263, 226);
+            this.lblDesc.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDesc.Location = new System.Drawing.Point(115, 124);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(710, 67);
+            this.lblDesc.Size = new System.Drawing.Size(482, 46);
             this.lblDesc.TabIndex = 3;
             this.lblDesc.Text = "Selamat Datang! Silakan Log In";
             // 
@@ -112,7 +112,7 @@ namespace wasty
             // 
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPassword.Location = new System.Drawing.Point(399, 456);
+            this.tbPassword.Location = new System.Drawing.Point(134, 314);
             this.tbPassword.MinimumSize = new System.Drawing.Size(450, 51);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PlaceholderText = "Password";
@@ -126,7 +126,7 @@ namespace wasty
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(518, 553);
+            this.btnLogin.Location = new System.Drawing.Point(250, 426);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(220, 50);
             this.btnLogin.TabIndex = 10;
@@ -138,7 +138,7 @@ namespace wasty
             // 
             this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbUsername.Location = new System.Drawing.Point(399, 368);
+            this.tbUsername.Location = new System.Drawing.Point(134, 228);
             this.tbUsername.MinimumSize = new System.Drawing.Size(450, 51);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PlaceholderText = "Username";
@@ -149,10 +149,10 @@ namespace wasty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1764, 886);
+            this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidePanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";

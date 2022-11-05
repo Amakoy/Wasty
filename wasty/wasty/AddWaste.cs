@@ -134,5 +134,10 @@ namespace wasty
             ShowRec.Show();
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

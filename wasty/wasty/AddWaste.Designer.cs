@@ -76,7 +76,7 @@ namespace wasty
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mainPanel.Location = new System.Drawing.Point(110, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1741, 954);
+            this.mainPanel.Size = new System.Drawing.Size(1170, 652);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -94,39 +94,40 @@ namespace wasty
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(634, 235);
+            this.dataGridView1.Location = new System.Drawing.Point(382, 142);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(931, 569);
+            this.dataGridView1.Size = new System.Drawing.Size(625, 426);
             this.dataGridView1.TabIndex = 6;
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(216, 484);
+            this.btnAdd.Location = new System.Drawing.Point(108, 364);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(207, 50);
+            this.btnAdd.Size = new System.Drawing.Size(138, 41);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add Sampah";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbPrice
             // 
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPrice.Location = new System.Drawing.Point(95, 400);
+            this.tbPrice.Location = new System.Drawing.Point(46, 307);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(450, 34);
+            this.tbPrice.Size = new System.Drawing.Size(275, 34);
             this.tbPrice.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(95, 343);
+            this.label3.Location = new System.Drawing.Point(46, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 35);
             this.label3.TabIndex = 3;
@@ -135,9 +136,9 @@ namespace wasty
             // tbType
             // 
             this.tbType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbType.Location = new System.Drawing.Point(95, 285);
+            this.tbType.Location = new System.Drawing.Point(46, 192);
             this.tbType.Name = "tbType";
-            this.tbType.Size = new System.Drawing.Size(450, 34);
+            this.tbType.Size = new System.Drawing.Size(275, 34);
             this.tbType.TabIndex = 2;
             this.tbType.TextChanged += new System.EventHandler(this.tbType_TextChanged_1);
             // 
@@ -145,7 +146,7 @@ namespace wasty
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(95, 235);
+            this.label2.Location = new System.Drawing.Point(46, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 35);
             this.label2.TabIndex = 1;
@@ -154,12 +155,12 @@ namespace wasty
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(593, 82);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(407, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 67);
+            this.label1.Size = new System.Drawing.Size(147, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Add Jenis Sampah";
+            this.label1.Text = "Sampah";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // sidePanel
@@ -179,7 +180,7 @@ namespace wasty
             // 
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(-7, 485);
+            this.panel4.Location = new System.Drawing.Point(-7, 339);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(117, 84);
             this.panel4.TabIndex = 10;
@@ -200,7 +201,7 @@ namespace wasty
             // 
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(-7, 402);
+            this.panel3.Location = new System.Drawing.Point(-7, 256);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(117, 84);
             this.panel3.TabIndex = 9;
@@ -221,7 +222,7 @@ namespace wasty
             // 
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(-7, 319);
+            this.panel2.Location = new System.Drawing.Point(-7, 173);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(117, 84);
             this.panel2.TabIndex = 8;
@@ -242,7 +243,7 @@ namespace wasty
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(-7, 236);
+            this.panel1.Location = new System.Drawing.Point(-7, 90);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 84);
             this.panel1.TabIndex = 7;
@@ -263,10 +264,10 @@ namespace wasty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1782, 933);
+            this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.mainPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddWaste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddWaste";

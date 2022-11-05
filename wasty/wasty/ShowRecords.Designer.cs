@@ -31,9 +31,6 @@ namespace wasty
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowRecords));
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.dgvRecords = new System.Windows.Forms.DataGridView();
-            this.lblAddSampah = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -42,9 +39,10 @@ namespace wasty
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.dgvRecords = new System.Windows.Forms.DataGridView();
+            this.lblAddSampah = new System.Windows.Forms.Label();
             this.sidePanel.SuspendLayout();
-            this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel6.SuspendLayout();
@@ -53,6 +51,8 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -65,42 +65,8 @@ namespace wasty
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(110, 542);
+            this.sidePanel.Size = new System.Drawing.Size(110, 607);
             this.sidePanel.TabIndex = 3;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
-            this.mainPanel.Controls.Add(this.dgvRecords);
-            this.mainPanel.Controls.Add(this.lblAddSampah);
-            this.mainPanel.Location = new System.Drawing.Point(68, 0);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(894, 542);
-            this.mainPanel.TabIndex = 2;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
-            // dgvRecords
-            // 
-            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecords.Location = new System.Drawing.Point(91, 116);
-            this.dgvRecords.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvRecords.Name = "dgvRecords";
-            this.dgvRecords.RowHeadersWidth = 62;
-            this.dgvRecords.RowTemplate.Height = 33;
-            this.dgvRecords.Size = new System.Drawing.Size(764, 384);
-            this.dgvRecords.TabIndex = 13;
-            // 
-            // lblAddSampah
-            // 
-            this.lblAddSampah.AutoSize = true;
-            this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAddSampah.Location = new System.Drawing.Point(298, 38);
-            this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAddSampah.Name = "lblAddSampah";
-            this.lblAddSampah.Size = new System.Drawing.Size(314, 50);
-            this.lblAddSampah.TabIndex = 12;
-            this.lblAddSampah.Text = "Record Transaksi";
             // 
             // panel5
             // 
@@ -182,21 +148,53 @@ namespace wasty
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
+            this.mainPanel.Controls.Add(this.dgvRecords);
+            this.mainPanel.Controls.Add(this.lblAddSampah);
+            this.mainPanel.Location = new System.Drawing.Point(107, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1048, 607);
+            this.mainPanel.TabIndex = 2;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // dgvRecords
+            // 
+            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecords.Location = new System.Drawing.Point(51, 116);
+            this.dgvRecords.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvRecords.Name = "dgvRecords";
+            this.dgvRecords.RowHeadersWidth = 62;
+            this.dgvRecords.RowTemplate.Height = 33;
+            this.dgvRecords.Size = new System.Drawing.Size(946, 455);
+            this.dgvRecords.TabIndex = 13;
+            // 
+            // lblAddSampah
+            // 
+            this.lblAddSampah.AutoSize = true;
+            this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAddSampah.Location = new System.Drawing.Point(298, 38);
+            this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddSampah.Name = "lblAddSampah";
+            this.lblAddSampah.Size = new System.Drawing.Size(314, 50);
+            this.lblAddSampah.TabIndex = 12;
+            this.lblAddSampah.Text = "Record Transaksi";
+            // 
             // ShowRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 542);
+            this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.mainPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ShowRecords";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowRecords";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ShowRecords_FormClosed);
             this.sidePanel.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -205,6 +203,9 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.ResumeLayout(false);
 
         }

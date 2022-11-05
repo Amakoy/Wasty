@@ -32,14 +32,6 @@ namespace wasty
             System.Windows.Forms.Button btnTambah;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblJudul = new System.Windows.Forms.Label();
-            this.lblHp = new System.Windows.Forms.Label();
-            this.lblJenis = new System.Windows.Forms.Label();
-            this.lblNama = new System.Windows.Forms.Label();
-            this.tbJenis = new System.Windows.Forms.TextBox();
-            this.tbHp = new System.Windows.Forms.TextBox();
-            this.tbNama = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,9 +40,16 @@ namespace wasty
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblJudul = new System.Windows.Forms.Label();
+            this.lblHp = new System.Windows.Forms.Label();
+            this.lblJenis = new System.Windows.Forms.Label();
+            this.lblNama = new System.Windows.Forms.Label();
+            this.tbJenis = new System.Windows.Forms.TextBox();
+            this.tbHp = new System.Windows.Forms.TextBox();
+            this.tbNama = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             btnTambah = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
@@ -59,6 +58,7 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTambah
@@ -67,7 +67,7 @@ namespace wasty
             btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTambah.ForeColor = System.Drawing.Color.White;
-            btnTambah.Location = new System.Drawing.Point(199, 346);
+            btnTambah.Location = new System.Drawing.Point(196, 356);
             btnTambah.Margin = new System.Windows.Forms.Padding(2);
             btnTambah.Name = "btnTambah";
             btnTambah.Size = new System.Drawing.Size(162, 33);
@@ -84,83 +84,8 @@ namespace wasty
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Location = new System.Drawing.Point(-2, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(110, 555);
+            this.panel1.Size = new System.Drawing.Size(110, 918);
             this.panel1.TabIndex = 1;
-            // 
-            // lblJudul
-            // 
-            this.lblJudul.AutoSize = true;
-            this.lblJudul.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul.Location = new System.Drawing.Point(354, 57);
-            this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(271, 50);
-            this.lblJudul.TabIndex = 2;
-            this.lblJudul.Text = "Add Customer";
-            // 
-            // lblHp
-            // 
-            this.lblHp.AutoSize = true;
-            this.lblHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHp.Location = new System.Drawing.Point(145, 209);
-            this.lblHp.Name = "lblHp";
-            this.lblHp.Size = new System.Drawing.Size(88, 20);
-            this.lblHp.TabIndex = 13;
-            this.lblHp.Text = "Nomor HP";
-            // 
-            // lblJenis
-            // 
-            this.lblJenis.AutoSize = true;
-            this.lblJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJenis.Location = new System.Drawing.Point(145, 273);
-            this.lblJenis.Name = "lblJenis";
-            this.lblJenis.Size = new System.Drawing.Size(115, 20);
-            this.lblJenis.TabIndex = 12;
-            this.lblJenis.Text = "Jenis Sampah";
-            // 
-            // lblNama
-            // 
-            this.lblNama.AutoSize = true;
-            this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNama.Location = new System.Drawing.Point(145, 149);
-            this.lblNama.Name = "lblNama";
-            this.lblNama.Size = new System.Drawing.Size(121, 20);
-            this.lblNama.TabIndex = 11;
-            this.lblNama.Text = "Nama Lengkap";
-            this.lblNama.Click += new System.EventHandler(this.lblNama_Click);
-            // 
-            // tbJenis
-            // 
-            this.tbJenis.Location = new System.Drawing.Point(145, 300);
-            this.tbJenis.Margin = new System.Windows.Forms.Padding(2);
-            this.tbJenis.Name = "tbJenis";
-            this.tbJenis.Size = new System.Drawing.Size(281, 27);
-            this.tbJenis.TabIndex = 18;
-            // 
-            // tbHp
-            // 
-            this.tbHp.Location = new System.Drawing.Point(145, 236);
-            this.tbHp.Margin = new System.Windows.Forms.Padding(2);
-            this.tbHp.Name = "tbHp";
-            this.tbHp.Size = new System.Drawing.Size(281, 27);
-            this.tbHp.TabIndex = 16;
-            // 
-            // tbNama
-            // 
-            this.tbNama.Location = new System.Drawing.Point(145, 175);
-            this.tbNama.Margin = new System.Windows.Forms.Padding(2);
-            this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(281, 27);
-            this.tbNama.TabIndex = 15;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(479, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(430, 336);
-            this.dataGridView1.TabIndex = 20;
             // 
             // panel4
             // 
@@ -242,12 +167,87 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblJudul
+            // 
+            this.lblJudul.AutoSize = true;
+            this.lblJudul.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblJudul.Location = new System.Drawing.Point(498, 36);
+            this.lblJudul.Name = "lblJudul";
+            this.lblJudul.Size = new System.Drawing.Size(157, 46);
+            this.lblJudul.TabIndex = 2;
+            this.lblJudul.Text = "Nasabah";
+            // 
+            // lblHp
+            // 
+            this.lblHp.AutoSize = true;
+            this.lblHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHp.Location = new System.Drawing.Point(142, 219);
+            this.lblHp.Name = "lblHp";
+            this.lblHp.Size = new System.Drawing.Size(88, 20);
+            this.lblHp.TabIndex = 13;
+            this.lblHp.Text = "Nomor HP";
+            // 
+            // lblJenis
+            // 
+            this.lblJenis.AutoSize = true;
+            this.lblJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJenis.Location = new System.Drawing.Point(142, 283);
+            this.lblJenis.Name = "lblJenis";
+            this.lblJenis.Size = new System.Drawing.Size(115, 20);
+            this.lblJenis.TabIndex = 12;
+            this.lblJenis.Text = "Jenis Sampah";
+            // 
+            // lblNama
+            // 
+            this.lblNama.AutoSize = true;
+            this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNama.Location = new System.Drawing.Point(142, 159);
+            this.lblNama.Name = "lblNama";
+            this.lblNama.Size = new System.Drawing.Size(121, 20);
+            this.lblNama.TabIndex = 11;
+            this.lblNama.Text = "Nama Lengkap";
+            this.lblNama.Click += new System.EventHandler(this.lblNama_Click);
+            // 
+            // tbJenis
+            // 
+            this.tbJenis.Location = new System.Drawing.Point(142, 310);
+            this.tbJenis.Margin = new System.Windows.Forms.Padding(2);
+            this.tbJenis.Name = "tbJenis";
+            this.tbJenis.Size = new System.Drawing.Size(281, 27);
+            this.tbJenis.TabIndex = 18;
+            // 
+            // tbHp
+            // 
+            this.tbHp.Location = new System.Drawing.Point(142, 246);
+            this.tbHp.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHp.Name = "tbHp";
+            this.tbHp.Size = new System.Drawing.Size(281, 27);
+            this.tbHp.TabIndex = 16;
+            // 
+            // tbNama
+            // 
+            this.tbNama.Location = new System.Drawing.Point(142, 185);
+            this.tbNama.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNama.Name = "tbNama";
+            this.tbNama.Size = new System.Drawing.Size(281, 27);
+            this.tbNama.TabIndex = 15;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(498, 149);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(625, 426);
+            this.dataGridView1.TabIndex = 20;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(962, 542);
+            this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(btnTambah);
             this.Controls.Add(this.tbJenis);
@@ -259,10 +259,10 @@ namespace wasty
             this.Controls.Add(this.lblJudul);
             this.Controls.Add(this.panel1);
             this.Name = "AddCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddCustomer_FormClosed);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -271,6 +271,7 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
