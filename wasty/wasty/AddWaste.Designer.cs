@@ -163,6 +163,7 @@ namespace wasty
             this.dgvWaste.Size = new System.Drawing.Size(625, 426);
             this.dgvWaste.TabIndex = 6;
             this.dgvWaste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellClick);
+            this.dgvWaste.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellContentClick);
             // 
             // tbPrice
             // 

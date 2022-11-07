@@ -89,5 +89,10 @@ namespace wasty
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -173,7 +173,7 @@ namespace wasty
                 cmd.Parameters.AddWithValue("_waste_price", tbPrice.Text);
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
-                    MessageBox.Show("Data Jenis Sampah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data Nasabah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     btnLoaddata.PerformClick();
                     tbType.Text = tbType.Text = null;
@@ -213,7 +213,7 @@ namespace wasty
                 cmd.Parameters.AddWithValue("_waste_price", tbPrice.Text);
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
-                    MessageBox.Show("Data Jenis Sampah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data Nasabah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     btnLoaddata.PerformClick();
                     tbType.Text = tbPrice.Text = null;
@@ -245,7 +245,7 @@ namespace wasty
                     cmd.Parameters.AddWithValue("_waste_id", r.Cells["_waste_id"].Value.ToString());
                     if ((int)cmd.ExecuteScalar() == 1)
                     {
-                        MessageBox.Show("Data Jenis Sampah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Data Nasabah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
                         btnLoaddata.PerformClick();
                         tbType.Text = tbPrice.Text = null;
@@ -256,6 +256,11 @@ namespace wasty
                 {
                     MessageBox.Show("Error:" + ex.Message, "Delete FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+        }
+
+        private void dgvWaste_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
