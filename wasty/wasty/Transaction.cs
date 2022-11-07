@@ -28,14 +28,37 @@ namespace wasty
             set { _totalPrice = value; }
         }
 
-        public void addTransaction(string userName, int amountOfGoods, float totalPrice)
+        public void AddTransaction(string userName, int amountOfGoods, float totalPrice)
         {
 
         }
 
-        public float calculatePrice(string wasteType, float wasteWeight)
+        public float CalculatePrice(string wasteType, float wasteWeight)
         {
+            float price = WastePrice(wasteType,"weight")*wasteWeight;
+            return price;
+        }
+
+        public float CalculatePrice(string wasteType, int wasteQty)
+        {
+            float price = WastePrice(wasteType,"quantity") * wasteQty;
+            return price;
+        }
+
+        private float WastePrice(string wasteType, string weightOrQty)
+        {
+            if (weightOrQty == "weight")
+            {
+                return 0;
+            }
+
+            if (weightOrQty == "quantity")
+            {
+                return 0;
+            }
             return 0;
         }
+
+
     }
 }
