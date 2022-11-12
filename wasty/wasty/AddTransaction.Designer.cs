@@ -32,6 +32,8 @@ namespace wasty
             System.Windows.Forms.Button btnTotal;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTransaction));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.cbWasteType = new System.Windows.Forms.ComboBox();
+            this.btnLoaddata = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,9 +45,7 @@ namespace wasty
             this.lbTanggal = new System.Windows.Forms.Label();
             this.dgvTransaksi = new System.Windows.Forms.DataGridView();
             this.tbTotal = new System.Windows.Forms.TextBox();
-            this.tbJenis = new System.Windows.Forms.TextBox();
             this.tbBerat = new System.Windows.Forms.TextBox();
-            this.tbHp = new System.Windows.Forms.TextBox();
             this.tbTanggal = new System.Windows.Forms.TextBox();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,7 +56,8 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLoaddata = new System.Windows.Forms.Button();
+            this.cbHp = new System.Windows.Forms.ComboBox();
+            this.lblUnitPrice = new System.Windows.Forms.Label();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).BeginInit();
@@ -77,10 +78,10 @@ namespace wasty
             btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTotal.ForeColor = System.Drawing.Color.White;
-            btnTotal.Location = new System.Drawing.Point(105, 379);
+            btnTotal.Location = new System.Drawing.Point(244, 389);
             btnTotal.Margin = new System.Windows.Forms.Padding(2);
             btnTotal.Name = "btnTotal";
-            btnTotal.Size = new System.Drawing.Size(162, 33);
+            btnTotal.Size = new System.Drawing.Size(106, 33);
             btnTotal.TabIndex = 5;
             btnTotal.Text = "Hitung total";
             btnTotal.UseVisualStyleBackColor = false;
@@ -88,6 +89,9 @@ namespace wasty
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
+            this.mainPanel.Controls.Add(this.lblUnitPrice);
+            this.mainPanel.Controls.Add(this.cbHp);
+            this.mainPanel.Controls.Add(this.cbWasteType);
             this.mainPanel.Controls.Add(this.btnLoaddata);
             this.mainPanel.Controls.Add(this.button2);
             this.mainPanel.Controls.Add(this.btnAdd);
@@ -101,15 +105,37 @@ namespace wasty
             this.mainPanel.Controls.Add(this.dgvTransaksi);
             this.mainPanel.Controls.Add(btnTotal);
             this.mainPanel.Controls.Add(this.tbTotal);
-            this.mainPanel.Controls.Add(this.tbJenis);
             this.mainPanel.Controls.Add(this.tbBerat);
-            this.mainPanel.Controls.Add(this.tbHp);
             this.mainPanel.Controls.Add(this.tbTanggal);
             this.mainPanel.Location = new System.Drawing.Point(106, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1053, 610);
             this.mainPanel.TabIndex = 0;
+            // 
+            // cbWasteType
+            // 
+            this.cbWasteType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbWasteType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbWasteType.FormattingEnabled = true;
+            this.cbWasteType.Location = new System.Drawing.Point(40, 275);
+            this.cbWasteType.Name = "cbWasteType";
+            this.cbWasteType.Size = new System.Drawing.Size(310, 28);
+            this.cbWasteType.TabIndex = 35;
+            // 
+            // btnLoaddata
+            // 
+            this.btnLoaddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
+            this.btnLoaddata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaddata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLoaddata.ForeColor = System.Drawing.Color.White;
+            this.btnLoaddata.Location = new System.Drawing.Point(888, 74);
+            this.btnLoaddata.Name = "btnLoaddata";
+            this.btnLoaddata.Size = new System.Drawing.Size(107, 40);
+            this.btnLoaddata.TabIndex = 34;
+            this.btnLoaddata.Text = "Load Data";
+            this.btnLoaddata.UseVisualStyleBackColor = false;
+            this.btnLoaddata.Click += new System.EventHandler(this.btnLoaddata_Click);
             // 
             // button2
             // 
@@ -230,14 +256,6 @@ namespace wasty
             this.tbTotal.Size = new System.Drawing.Size(310, 27);
             this.tbTotal.TabIndex = 4;
             // 
-            // tbJenis
-            // 
-            this.tbJenis.Location = new System.Drawing.Point(40, 274);
-            this.tbJenis.Margin = new System.Windows.Forms.Padding(2);
-            this.tbJenis.Name = "tbJenis";
-            this.tbJenis.Size = new System.Drawing.Size(310, 27);
-            this.tbJenis.TabIndex = 3;
-            // 
             // tbBerat
             // 
             this.tbBerat.Location = new System.Drawing.Point(40, 339);
@@ -245,14 +263,6 @@ namespace wasty
             this.tbBerat.Name = "tbBerat";
             this.tbBerat.Size = new System.Drawing.Size(310, 27);
             this.tbBerat.TabIndex = 2;
-            // 
-            // tbHp
-            // 
-            this.tbHp.Location = new System.Drawing.Point(40, 210);
-            this.tbHp.Margin = new System.Windows.Forms.Padding(2);
-            this.tbHp.Name = "tbHp";
-            this.tbHp.Size = new System.Drawing.Size(310, 27);
-            this.tbHp.TabIndex = 1;
             // 
             // tbTanggal
             // 
@@ -356,19 +366,30 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnLoaddata
+            // cbHp
             // 
-            this.btnLoaddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.btnLoaddata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaddata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoaddata.ForeColor = System.Drawing.Color.White;
-            this.btnLoaddata.Location = new System.Drawing.Point(888, 74);
-            this.btnLoaddata.Name = "btnLoaddata";
-            this.btnLoaddata.Size = new System.Drawing.Size(107, 40);
-            this.btnLoaddata.TabIndex = 34;
-            this.btnLoaddata.Text = "Load Data";
-            this.btnLoaddata.UseVisualStyleBackColor = false;
-            this.btnLoaddata.Click += new System.EventHandler(this.btnLoaddata_Click);
+            this.cbHp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbHp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbHp.FormattingEnabled = true;
+            this.cbHp.Items.AddRange(new object[] {
+            "botol plastik",
+            "kaca",
+            "kursi",
+            "lemari"});
+            this.cbHp.Location = new System.Drawing.Point(40, 214);
+            this.cbHp.Name = "cbHp";
+            this.cbHp.Size = new System.Drawing.Size(310, 28);
+            this.cbHp.TabIndex = 36;
+            // 
+            // lblUnitPrice
+            // 
+            this.lblUnitPrice.AutoSize = true;
+            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnitPrice.Location = new System.Drawing.Point(39, 389);
+            this.lblUnitPrice.Name = "lblUnitPrice";
+            this.lblUnitPrice.Size = new System.Drawing.Size(116, 20);
+            this.lblUnitPrice.TabIndex = 37;
+            this.lblUnitPrice.Text = "Harga per unit";
             // 
             // AddTransaction
             // 
@@ -403,12 +424,10 @@ namespace wasty
 
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel sidePanel;
-        private System.Windows.Forms.TextBox tbHp;
         private System.Windows.Forms.TextBox tbTanggal;
         private System.Windows.Forms.DataGridView dgvTransaksi;
         private System.Windows.Forms.Button btnTotal;
         private System.Windows.Forms.TextBox tbTotal;
-        private System.Windows.Forms.TextBox tbJenis;
         private System.Windows.Forms.TextBox tbBerat;
         private System.Windows.Forms.Label lblBerat;
         private System.Windows.Forms.Label lblHp;
@@ -428,5 +447,8 @@ namespace wasty
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnLoaddata;
+        private System.Windows.Forms.ComboBox cbWasteType;
+        private System.Windows.Forms.ComboBox cbHp;
+        private System.Windows.Forms.Label lblUnitPrice;
     }
 }
