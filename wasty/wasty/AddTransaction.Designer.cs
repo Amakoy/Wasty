@@ -32,6 +32,8 @@ namespace wasty
             System.Windows.Forms.Button btnTotal;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTransaction));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.lblUnitPrice = new System.Windows.Forms.Label();
+            this.cbHp = new System.Windows.Forms.ComboBox();
             this.cbWasteType = new System.Windows.Forms.ComboBox();
             this.btnLoaddata = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbHp = new System.Windows.Forms.ComboBox();
-            this.lblUnitPrice = new System.Windows.Forms.Label();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).BeginInit();
@@ -113,6 +113,31 @@ namespace wasty
             this.mainPanel.Size = new System.Drawing.Size(1053, 610);
             this.mainPanel.TabIndex = 0;
             // 
+            // lblUnitPrice
+            // 
+            this.lblUnitPrice.AutoSize = true;
+            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnitPrice.Location = new System.Drawing.Point(39, 389);
+            this.lblUnitPrice.Name = "lblUnitPrice";
+            this.lblUnitPrice.Size = new System.Drawing.Size(116, 20);
+            this.lblUnitPrice.TabIndex = 37;
+            this.lblUnitPrice.Text = "Harga per unit";
+            // 
+            // cbHp
+            // 
+            this.cbHp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbHp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbHp.FormattingEnabled = true;
+            this.cbHp.Items.AddRange(new object[] {
+            "botol plastik",
+            "kaca",
+            "kursi",
+            "lemari"});
+            this.cbHp.Location = new System.Drawing.Point(40, 214);
+            this.cbHp.Name = "cbHp";
+            this.cbHp.Size = new System.Drawing.Size(310, 28);
+            this.cbHp.TabIndex = 36;
+            // 
             // cbWasteType
             // 
             this.cbWasteType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -122,6 +147,7 @@ namespace wasty
             this.cbWasteType.Name = "cbWasteType";
             this.cbWasteType.Size = new System.Drawing.Size(310, 28);
             this.cbWasteType.TabIndex = 35;
+            this.cbWasteType.SelectedIndexChanged += new System.EventHandler(this.cbWasteType_SelectedIndexChanged);
             // 
             // btnLoaddata
             // 
@@ -365,31 +391,6 @@ namespace wasty
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // cbHp
-            // 
-            this.cbHp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbHp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbHp.FormattingEnabled = true;
-            this.cbHp.Items.AddRange(new object[] {
-            "botol plastik",
-            "kaca",
-            "kursi",
-            "lemari"});
-            this.cbHp.Location = new System.Drawing.Point(40, 214);
-            this.cbHp.Name = "cbHp";
-            this.cbHp.Size = new System.Drawing.Size(310, 28);
-            this.cbHp.TabIndex = 36;
-            // 
-            // lblUnitPrice
-            // 
-            this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnitPrice.Location = new System.Drawing.Point(39, 389);
-            this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(116, 20);
-            this.lblUnitPrice.TabIndex = 37;
-            this.lblUnitPrice.Text = "Harga per unit";
             // 
             // AddTransaction
             // 

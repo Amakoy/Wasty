@@ -6,32 +6,43 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Npgsql;
 
 namespace wasty
 {
     public partial class AddTransaction : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-       (
-           // untuk membuat border radius
-           int nLeftRect,          // x-coordinate of upper-left corner
-           int nTopRect,           // y-coordinate of upper-left corner
-           int nRightRect,         // x-coordinate of lower-right corner
-           int nBottonRect,        // y-coordinate of lower-right corner
-           int nWidthEllipse,       // width of ellipse
-           int nHeightEllipse       // height of ellipse
-       );
 
         public AddTransaction()
         {
-            InitializeComponent();
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            InitializeComponent(); 
         }
+
+        private NpgsqlConnection conn;
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
 
         private void AddTransaction_Load(object sender, EventArgs e)
         {
+            conn = new NpgsqlConnection(connstring);
+            FillCbWasteType();
+        }
 
+        private void FillCbWasteType()
+        { 
+            conn.Open();
+
+            NpgsqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from waste";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                cbWasteType.Items.Add(dr["waste_type"].ToString());
+            }
+            conn.Close();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -110,6 +121,24 @@ namespace wasty
         private void btnLoaddata_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbWasteType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from waste where waste_type='"+cbWasteType.SelectedItem.ToString()+"'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblUnitPrice.Text = dr["waste_price"].ToString();
+            }
+            conn.Close();
         }
     }
     
