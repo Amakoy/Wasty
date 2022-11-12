@@ -106,6 +106,11 @@ namespace wasty
             showRecords.Show();
             this.Hide();
         }
+
+        private void btnLoaddata_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
