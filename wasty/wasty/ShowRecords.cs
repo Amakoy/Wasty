@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
 
@@ -14,6 +16,12 @@ namespace wasty
         {
             InitializeComponent();
         }
+
+        private NpgsqlConnection conn;
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Hadikeren123;Database=wasty";
+        public static NpgsqlCommand cmd;
+        private string sql = null;
+        DataTable dt = null;
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -87,6 +95,33 @@ namespace wasty
             AddWaste addWaste = new AddWaste();
             addWaste.Show();
             this.Hide();
+        }
+
+        private void LoadData()
+        {
+            try
+            {
+                
+                conn.Open();
+                sql = @"select * from select_record()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvRecords.DataSource = dt;
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Load FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ShowRecords_Load(object sender, EventArgs e)
+        {
+            conn = new NpgsqlConnection(connstring);
+            LoadData();
         }
     }
 }

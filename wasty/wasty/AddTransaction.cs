@@ -7,11 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Npgsql;
+using System.Globalization;
 
 namespace wasty
 {
     public partial class AddTransaction : Form
     {
+
+
 
         public AddTransaction()
         {
@@ -19,16 +22,37 @@ namespace wasty
         }
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Hadikeren123;Database=wasty";
+        public static NpgsqlCommand cmd;
+        private string sql = null;
 
         private void AddTransaction_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
             FillCbWasteType();
+            FillCbHP();
+        }
+
+        private void FillCbHP()
+        {
+            conn.Open();
+
+            NpgsqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from customer";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cbCustomer.Items.Add(dr["customer_name"].ToString());
+            }
+            conn.Close();
         }
 
         private void FillCbWasteType()
-        { 
+        {
             conn.Open();
 
             NpgsqlCommand cmd = conn.CreateCommand();
@@ -38,7 +62,7 @@ namespace wasty
             DataTable dt = new DataTable();
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             da.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 cbWasteType.Items.Add(dr["waste_type"].ToString());
             }
@@ -139,6 +163,42 @@ namespace wasty
                 lblUnitPrice.Text = dr["waste_price"].ToString();
             }
             conn.Close();
+        }
+
+        private void dgvTransaksi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                sql = @"select * from st_insert_record(:_weight_of_goods, :_total_price, :_customer_name)";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("_weight_of_goods", float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat));
+                cmd.Parameters.AddWithValue("_total_price", float.Parse(tbTotal.Text, CultureInfo.InvariantCulture.NumberFormat));
+                cmd.Parameters.AddWithValue("_customer_name", cbCustomer.Text);
+
+                if ((int)cmd.ExecuteScalar() == 1)
+                {
+                    MessageBox.Show("Transaksi telah berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
+                    tbBerat.Text = tbTotal.Text = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Add FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnTotal_Click(object sender, EventArgs e)
+        {
+            float price = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture.NumberFormat) * float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat);
+            tbTotal.Text = price.ToString();
         }
     }
     

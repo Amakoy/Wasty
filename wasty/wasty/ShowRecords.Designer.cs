@@ -194,6 +194,7 @@ namespace wasty
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowRecords";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ShowRecords_FormClosed);
+            this.Load += new System.EventHandler(this.ShowRecords_Load);
             this.sidePanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

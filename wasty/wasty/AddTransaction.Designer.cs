@@ -33,19 +33,15 @@ namespace wasty
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTransaction));
             this.mainPanel = new System.Windows.Forms.Panel();
             this.lblUnitPrice = new System.Windows.Forms.Label();
-            this.cbHp = new System.Windows.Forms.ComboBox();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
             this.cbWasteType = new System.Windows.Forms.ComboBox();
-            this.btnLoaddata = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblAddSampah = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblBerat = new System.Windows.Forms.Label();
             this.lblHp = new System.Windows.Forms.Label();
             this.lblJenis = new System.Windows.Forms.Label();
             this.lbTanggal = new System.Windows.Forms.Label();
-            this.dgvTransaksi = new System.Windows.Forms.DataGridView();
             this.tbTotal = new System.Windows.Forms.TextBox();
             this.tbBerat = new System.Windows.Forms.TextBox();
             this.tbTanggal = new System.Windows.Forms.TextBox();
@@ -60,7 +56,6 @@ namespace wasty
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).BeginInit();
             this.sidePanel.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -78,31 +73,28 @@ namespace wasty
             btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTotal.ForeColor = System.Drawing.Color.White;
-            btnTotal.Location = new System.Drawing.Point(244, 389);
+            btnTotal.Location = new System.Drawing.Point(373, 433);
             btnTotal.Margin = new System.Windows.Forms.Padding(2);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new System.Drawing.Size(106, 33);
             btnTotal.TabIndex = 5;
             btnTotal.Text = "Hitung total";
             btnTotal.UseVisualStyleBackColor = false;
+            btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.Controls.Add(this.lblUnitPrice);
-            this.mainPanel.Controls.Add(this.cbHp);
+            this.mainPanel.Controls.Add(this.cbCustomer);
             this.mainPanel.Controls.Add(this.cbWasteType);
-            this.mainPanel.Controls.Add(this.btnLoaddata);
-            this.mainPanel.Controls.Add(this.button2);
             this.mainPanel.Controls.Add(this.btnAdd);
-            this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.lblAddSampah);
             this.mainPanel.Controls.Add(this.lblTotal);
             this.mainPanel.Controls.Add(this.lblBerat);
             this.mainPanel.Controls.Add(this.lblHp);
             this.mainPanel.Controls.Add(this.lblJenis);
             this.mainPanel.Controls.Add(this.lbTanggal);
-            this.mainPanel.Controls.Add(this.dgvTransaksi);
             this.mainPanel.Controls.Add(btnTotal);
             this.mainPanel.Controls.Add(this.tbTotal);
             this.mainPanel.Controls.Add(this.tbBerat);
@@ -117,64 +109,37 @@ namespace wasty
             // 
             this.lblUnitPrice.AutoSize = true;
             this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnitPrice.Location = new System.Drawing.Point(39, 389);
+            this.lblUnitPrice.Location = new System.Drawing.Point(168, 433);
             this.lblUnitPrice.Name = "lblUnitPrice";
             this.lblUnitPrice.Size = new System.Drawing.Size(116, 20);
             this.lblUnitPrice.TabIndex = 37;
             this.lblUnitPrice.Text = "Harga per unit";
             // 
-            // cbHp
+            // cbCustomer
             // 
-            this.cbHp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbHp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbHp.FormattingEnabled = true;
-            this.cbHp.Items.AddRange(new object[] {
+            this.cbCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Items.AddRange(new object[] {
             "botol plastik",
             "kaca",
             "kursi",
             "lemari"});
-            this.cbHp.Location = new System.Drawing.Point(40, 214);
-            this.cbHp.Name = "cbHp";
-            this.cbHp.Size = new System.Drawing.Size(310, 28);
-            this.cbHp.TabIndex = 36;
+            this.cbCustomer.Location = new System.Drawing.Point(169, 258);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(310, 28);
+            this.cbCustomer.TabIndex = 36;
             // 
             // cbWasteType
             // 
             this.cbWasteType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbWasteType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbWasteType.FormattingEnabled = true;
-            this.cbWasteType.Location = new System.Drawing.Point(40, 275);
+            this.cbWasteType.Location = new System.Drawing.Point(169, 319);
             this.cbWasteType.Name = "cbWasteType";
             this.cbWasteType.Size = new System.Drawing.Size(310, 28);
             this.cbWasteType.TabIndex = 35;
             this.cbWasteType.SelectedIndexChanged += new System.EventHandler(this.cbWasteType_SelectedIndexChanged);
-            // 
-            // btnLoaddata
-            // 
-            this.btnLoaddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.btnLoaddata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaddata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoaddata.ForeColor = System.Drawing.Color.White;
-            this.btnLoaddata.Location = new System.Drawing.Point(888, 74);
-            this.btnLoaddata.Name = "btnLoaddata";
-            this.btnLoaddata.Size = new System.Drawing.Size(107, 40);
-            this.btnLoaddata.TabIndex = 34;
-            this.btnLoaddata.Text = "Load Data";
-            this.btnLoaddata.UseVisualStyleBackColor = false;
-            this.btnLoaddata.Click += new System.EventHandler(this.btnLoaddata_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(253, 505);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 40);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
@@ -182,25 +147,13 @@ namespace wasty
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(40, 505);
+            this.btnAdd.Location = new System.Drawing.Point(563, 308);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(97, 40);
+            this.btnAdd.Size = new System.Drawing.Size(310, 40);
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(147, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 40);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblAddSampah
             // 
@@ -217,7 +170,7 @@ namespace wasty
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotal.Location = new System.Drawing.Point(40, 434);
+            this.lblTotal.Location = new System.Drawing.Point(563, 237);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(97, 20);
             this.lblTotal.TabIndex = 11;
@@ -227,7 +180,7 @@ namespace wasty
             // 
             this.lblBerat.AutoSize = true;
             this.lblBerat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBerat.Location = new System.Drawing.Point(40, 316);
+            this.lblBerat.Location = new System.Drawing.Point(169, 360);
             this.lblBerat.Name = "lblBerat";
             this.lblBerat.Size = new System.Drawing.Size(116, 20);
             this.lblBerat.TabIndex = 10;
@@ -237,17 +190,17 @@ namespace wasty
             // 
             this.lblHp.AutoSize = true;
             this.lblHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHp.Location = new System.Drawing.Point(40, 187);
+            this.lblHp.Location = new System.Drawing.Point(169, 231);
             this.lblHp.Name = "lblHp";
-            this.lblHp.Size = new System.Drawing.Size(88, 20);
+            this.lblHp.Size = new System.Drawing.Size(131, 20);
             this.lblHp.TabIndex = 9;
-            this.lblHp.Text = "Nomor HP";
+            this.lblHp.Text = "Nama Customer";
             // 
             // lblJenis
             // 
             this.lblJenis.AutoSize = true;
             this.lblJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJenis.Location = new System.Drawing.Point(40, 251);
+            this.lblJenis.Location = new System.Drawing.Point(169, 295);
             this.lblJenis.Name = "lblJenis";
             this.lblJenis.Size = new System.Drawing.Size(115, 20);
             this.lblJenis.TabIndex = 8;
@@ -257,26 +210,15 @@ namespace wasty
             // 
             this.lbTanggal.AutoSize = true;
             this.lbTanggal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTanggal.Location = new System.Drawing.Point(40, 127);
+            this.lbTanggal.Location = new System.Drawing.Point(169, 171);
             this.lbTanggal.Name = "lbTanggal";
             this.lbTanggal.Size = new System.Drawing.Size(68, 20);
             this.lbTanggal.TabIndex = 7;
             this.lbTanggal.Text = "Tanggal";
             // 
-            // dgvTransaksi
-            // 
-            this.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaksi.Location = new System.Drawing.Point(404, 134);
-            this.dgvTransaksi.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvTransaksi.Name = "dgvTransaksi";
-            this.dgvTransaksi.RowHeadersWidth = 62;
-            this.dgvTransaksi.RowTemplate.Height = 33;
-            this.dgvTransaksi.Size = new System.Drawing.Size(591, 438);
-            this.dgvTransaksi.TabIndex = 6;
-            // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(40, 456);
+            this.tbTotal.Location = new System.Drawing.Point(563, 259);
             this.tbTotal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(310, 27);
@@ -284,7 +226,7 @@ namespace wasty
             // 
             // tbBerat
             // 
-            this.tbBerat.Location = new System.Drawing.Point(40, 339);
+            this.tbBerat.Location = new System.Drawing.Point(169, 383);
             this.tbBerat.Margin = new System.Windows.Forms.Padding(2);
             this.tbBerat.Name = "tbBerat";
             this.tbBerat.Size = new System.Drawing.Size(310, 27);
@@ -292,11 +234,12 @@ namespace wasty
             // 
             // tbTanggal
             // 
-            this.tbTanggal.Location = new System.Drawing.Point(40, 149);
+            this.tbTanggal.Location = new System.Drawing.Point(169, 193);
             this.tbTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTanggal.Name = "tbTanggal";
             this.tbTanggal.Size = new System.Drawing.Size(310, 27);
             this.tbTanggal.TabIndex = 0;
+            this.tbTanggal.Text = "--Kosongkan jika pada hari ini--";
             // 
             // sidePanel
             // 
@@ -407,7 +350,6 @@ namespace wasty
             this.Load += new System.EventHandler(this.AddTransaction_Load);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).EndInit();
             this.sidePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -426,7 +368,6 @@ namespace wasty
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.TextBox tbTanggal;
-        private System.Windows.Forms.DataGridView dgvTransaksi;
         private System.Windows.Forms.Button btnTotal;
         private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.TextBox tbBerat;
@@ -444,12 +385,9 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnLoaddata;
         private System.Windows.Forms.ComboBox cbWasteType;
-        private System.Windows.Forms.ComboBox cbHp;
+        private System.Windows.Forms.ComboBox cbCustomer;
         private System.Windows.Forms.Label lblUnitPrice;
     }
 }
