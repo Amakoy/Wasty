@@ -175,11 +175,25 @@ namespace wasty
             try
             {
                 conn.Open();
-                sql = @"select * from st_insert_record(:_weight_of_goods, :_total_price, :_customer_name)";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_weight_of_goods", float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat));
-                cmd.Parameters.AddWithValue("_total_price", float.Parse(tbTotal.Text, CultureInfo.InvariantCulture.NumberFormat));
-                cmd.Parameters.AddWithValue("_customer_name", cbCustomer.Text);
+
+                if(tbTanggal.Text == "")
+                {
+                    sql = @"select * from st_insert_record(:_weight_of_goods, :_total_price, :_customer_name)";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_weight_of_goods", float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat));
+                    cmd.Parameters.AddWithValue("_total_price", float.Parse(tbTotal.Text, CultureInfo.InvariantCulture.NumberFormat));
+                    cmd.Parameters.AddWithValue("_customer_name", cbCustomer.Text);
+                }
+
+                else
+                {
+                    sql = @"select * from st_insert_record(:_record_date, :_weight_of_goods, :_total_price, :_customer_name)";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_record_date", tbTanggal.Text);
+                    cmd.Parameters.AddWithValue("_weight_of_goods", float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat));
+                    cmd.Parameters.AddWithValue("_total_price", float.Parse(tbTotal.Text, CultureInfo.InvariantCulture.NumberFormat));
+                    cmd.Parameters.AddWithValue("_customer_name", cbCustomer.Text);
+                }
 
                 if ((int)cmd.ExecuteScalar() == 1)
                 {

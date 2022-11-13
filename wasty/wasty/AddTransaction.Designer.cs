@@ -237,9 +237,9 @@ namespace wasty
             this.tbTanggal.Location = new System.Drawing.Point(169, 193);
             this.tbTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTanggal.Name = "tbTanggal";
+            this.tbTanggal.PlaceholderText = " TTTT/BB/HH (Kosongkan jika pada hari ini)";
             this.tbTanggal.Size = new System.Drawing.Size(310, 27);
             this.tbTanggal.TabIndex = 0;
-            this.tbTanggal.Text = "--Kosongkan jika pada hari ini--";
             // 
             // sidePanel
             // 
