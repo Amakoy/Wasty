@@ -120,15 +120,11 @@ namespace wasty
             this.cbCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Items.AddRange(new object[] {
-            "botol plastik",
-            "kaca",
-            "kursi",
-            "lemari"});
             this.cbCustomer.Location = new System.Drawing.Point(169, 258);
             this.cbCustomer.Name = "cbCustomer";
             this.cbCustomer.Size = new System.Drawing.Size(310, 28);
             this.cbCustomer.TabIndex = 36;
+            this.cbCustomer.SelectedIndexChanged += new System.EventHandler(this.cbCustomer_SelectedIndexChanged);
             // 
             // cbWasteType
             // 

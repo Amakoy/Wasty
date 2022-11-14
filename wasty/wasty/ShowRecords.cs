@@ -18,7 +18,7 @@ namespace wasty
         }
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Hadikeren123;Database=wasty";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
         public static NpgsqlCommand cmd;
         private string sql = null;
         DataTable dt = null;
@@ -122,6 +122,11 @@ namespace wasty
         {
             conn = new NpgsqlConnection(connstring);
             LoadData();
+        }
+
+        private void dgvRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

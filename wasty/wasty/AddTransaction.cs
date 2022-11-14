@@ -22,15 +22,15 @@ namespace wasty
         }
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Hadikeren123;Database=wasty";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
         public static NpgsqlCommand cmd;
         private string sql = null;
 
         private void AddTransaction_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
-            FillCbWasteType();
             FillCbHP();
+            FillCbWasteType();
         }
 
         private void FillCbHP()
@@ -164,7 +164,19 @@ namespace wasty
             }
             conn.Close();
         }
+        private void cbCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+            NpgsqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from customer where customer_name='" + cbCustomer.SelectedItem.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
 
+            conn.Close();
+        }
         private void dgvTransaksi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -214,6 +226,8 @@ namespace wasty
             float price = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture.NumberFormat) * float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat);
             tbTotal.Text = price.ToString();
         }
+
+
     }
     
 }

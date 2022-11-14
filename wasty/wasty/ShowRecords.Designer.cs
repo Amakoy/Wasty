@@ -170,6 +170,7 @@ namespace wasty
             this.dgvRecords.RowTemplate.Height = 33;
             this.dgvRecords.Size = new System.Drawing.Size(946, 455);
             this.dgvRecords.TabIndex = 13;
+            this.dgvRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecords_CellContentClick);
             // 
             // lblAddSampah
             // 
