@@ -32,31 +32,44 @@ namespace wasty
         {
 
         }
-
-        public float CalculatePrice(string wasteType, float wasteWeight)
+        // Jika barang dihitung per satuan berat 
+        public float CalcPrice(float unitPrice, float wasteWeight)
         {
-            float price = WastePrice(wasteType, "weight") * wasteWeight;
-            return price;
+            TotalPrice = unitPrice * wasteWeight;
+            return TotalPrice;
+        }
+        // Jika barang dihitung per buah 
+        public float CalcPrice(float unitPrice, int wasteNum)
+        {
+            TotalPrice = unitPrice * wasteNum;
+            return TotalPrice;
         }
 
-        public float CalculatePrice(string wasteType, int wasteQty)
-        {
-            float price = WastePrice(wasteType, "quantity") * wasteQty;
-            return price;
-        }
 
-        private float WastePrice(string wasteType, string weightOrQty)
-        {
-            if (weightOrQty == "weight")
-            {
-                return 0;
-            }
+        /*        public float CalculatePrice(string wasteType, float wasteWeight)
+                {
+                    float price = WastePrice(wasteType, "weight") * wasteWeight;
+                    return price;
+                }
 
-            if (weightOrQty == "quantity")
-            {
-                return 0;
-            }
-            return 0;
-        }
+                public float CalculatePrice(string wasteType, int wasteQty)
+                {
+                    float price = WastePrice(wasteType, "quantity") * wasteQty;
+                    return price;
+                }*/
+
+        /*        private float WastePrice(string wasteType, string weightOrQty)
+                {
+                    if (weightOrQty == "weight")
+                    {
+                        return 0;
+                    }
+
+                    if (weightOrQty == "quantity")
+                    {
+                        return 0;
+                    }
+                    return 0;
+                }*/
     }
 }

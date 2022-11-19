@@ -13,7 +13,7 @@ namespace wasty
 {
     public partial class AddTransaction : Form
     {
-
+        Transaction trans = new Transaction();
 
 
         public AddTransaction()
@@ -32,6 +32,39 @@ namespace wasty
             FillCbHP();
             FillCbWasteType();
         }
+        private void btnTotal_Click(object sender, EventArgs e)
+        {
+            string wasteUnit = cbWasteUnit.SelectedItem.ToString();
+            float unitPrice = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture);
+
+            if (wasteUnit == "Berat")
+            {
+                //call method hitung dengan berat  
+                float weight = float.Parse(tbBerat.Text, CultureInfo.InvariantCulture);
+                trans.CalcPrice(unitPrice, weight);
+
+                tbTotal.Text = trans.TotalPrice.ToString();
+            }
+            else if (wasteUnit == "Buah")
+            {
+                // call method hitung dengan unit buah
+                float num = int.Parse(tbBerat.Text, CultureInfo.InvariantCulture);
+                trans.CalcPrice(unitPrice, num);
+
+                tbTotal.Text = trans.TotalPrice.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Masukkan unit sampah yang benar");
+            }
+                
+        }
+
+        //private void btnTotal_Click(object sender, EventArgs e)
+        //{
+        //  float price = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture.NumberFormat) * float.Parse(tbBerat.Text, //CultureInfo.InvariantCulture.NumberFormat);
+        //tbTotal.Text = price.ToString();
+        //}
 
         private void FillCbHP()
         {
@@ -221,11 +254,7 @@ namespace wasty
             }
         }
 
-        private void btnTotal_Click(object sender, EventArgs e)
-        {
-            float price = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture.NumberFormat) * float.Parse(tbBerat.Text, CultureInfo.InvariantCulture.NumberFormat);
-            tbTotal.Text = price.ToString();
-        }
+        
 
 
     }

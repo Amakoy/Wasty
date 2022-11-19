@@ -54,6 +54,8 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbWasteUnit = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
@@ -73,7 +75,7 @@ namespace wasty
             btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTotal.ForeColor = System.Drawing.Color.White;
-            btnTotal.Location = new System.Drawing.Point(373, 433);
+            btnTotal.Location = new System.Drawing.Point(373, 489);
             btnTotal.Margin = new System.Windows.Forms.Padding(2);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new System.Drawing.Size(106, 33);
@@ -85,6 +87,8 @@ namespace wasty
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
+            this.mainPanel.Controls.Add(this.cbWasteUnit);
+            this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.lblUnitPrice);
             this.mainPanel.Controls.Add(this.cbCustomer);
             this.mainPanel.Controls.Add(this.cbWasteType);
@@ -109,7 +113,7 @@ namespace wasty
             // 
             this.lblUnitPrice.AutoSize = true;
             this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnitPrice.Location = new System.Drawing.Point(168, 433);
+            this.lblUnitPrice.Location = new System.Drawing.Point(168, 489);
             this.lblUnitPrice.Name = "lblUnitPrice";
             this.lblUnitPrice.Size = new System.Drawing.Size(116, 20);
             this.lblUnitPrice.TabIndex = 37;
@@ -176,11 +180,11 @@ namespace wasty
             // 
             this.lblBerat.AutoSize = true;
             this.lblBerat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBerat.Location = new System.Drawing.Point(169, 360);
+            this.lblBerat.Location = new System.Drawing.Point(169, 416);
             this.lblBerat.Name = "lblBerat";
-            this.lblBerat.Size = new System.Drawing.Size(116, 20);
+            this.lblBerat.Size = new System.Drawing.Size(176, 20);
             this.lblBerat.TabIndex = 10;
-            this.lblBerat.Text = "Berat Sampah";
+            this.lblBerat.Text = "Berat/Banyak Sampah";
             // 
             // lblHp
             // 
@@ -222,7 +226,7 @@ namespace wasty
             // 
             // tbBerat
             // 
-            this.tbBerat.Location = new System.Drawing.Point(169, 383);
+            this.tbBerat.Location = new System.Drawing.Point(169, 439);
             this.tbBerat.Margin = new System.Windows.Forms.Padding(2);
             this.tbBerat.Name = "tbBerat";
             this.tbBerat.Size = new System.Drawing.Size(310, 27);
@@ -331,6 +335,29 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // cbWasteUnit
+            // 
+            this.cbWasteUnit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbWasteUnit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbWasteUnit.FormattingEnabled = true;
+            this.cbWasteUnit.Items.AddRange(new object[] {
+            "Berat",
+            "Buah"});
+            this.cbWasteUnit.Location = new System.Drawing.Point(169, 380);
+            this.cbWasteUnit.Name = "cbWasteUnit";
+            this.cbWasteUnit.Size = new System.Drawing.Size(310, 28);
+            this.cbWasteUnit.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(169, 356);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Unit Sampah";
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -385,5 +412,7 @@ namespace wasty
         private System.Windows.Forms.ComboBox cbWasteType;
         private System.Windows.Forms.ComboBox cbCustomer;
         private System.Windows.Forms.Label lblUnitPrice;
+        private System.Windows.Forms.ComboBox cbWasteUnit;
+        private System.Windows.Forms.Label label1;
     }
 }
