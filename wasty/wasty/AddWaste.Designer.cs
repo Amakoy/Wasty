@@ -31,7 +31,6 @@ namespace wasty
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWaste));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.btnLoaddata = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -68,7 +67,6 @@ namespace wasty
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mainPanel.Controls.Add(this.btnLoaddata);
             this.mainPanel.Controls.Add(this.btnDelete);
             this.mainPanel.Controls.Add(this.btnAdd);
             this.mainPanel.Controls.Add(this.btnUpdate);
@@ -85,20 +83,6 @@ namespace wasty
             this.mainPanel.Size = new System.Drawing.Size(1046, 609);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
-            // btnLoaddata
-            // 
-            this.btnLoaddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.btnLoaddata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaddata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoaddata.ForeColor = System.Drawing.Color.White;
-            this.btnLoaddata.Location = new System.Drawing.Point(892, 89);
-            this.btnLoaddata.Name = "btnLoaddata";
-            this.btnLoaddata.Size = new System.Drawing.Size(107, 40);
-            this.btnLoaddata.TabIndex = 30;
-            this.btnLoaddata.Text = "Load Data";
-            this.btnLoaddata.UseVisualStyleBackColor = false;
-            this.btnLoaddata.Click += new System.EventHandler(this.btnLoaddata_Click);
             // 
             // btnDelete
             // 
@@ -360,6 +344,5 @@ namespace wasty
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnLoaddata;
     }
 }

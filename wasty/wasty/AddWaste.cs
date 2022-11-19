@@ -142,7 +142,7 @@ namespace wasty
 
         }
 
-        private void btnLoaddata_Click(object sender, EventArgs e)
+        private void ShowDgvWaste()
         {
             try
             {
@@ -175,7 +175,7 @@ namespace wasty
                 {
                     MessageBox.Show("Data Nasabah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
-                    btnLoaddata.PerformClick();
+                    ShowDgvWaste();
                     tbType.Text = tbType.Text = null;
                 }
 
@@ -215,7 +215,7 @@ namespace wasty
                 {
                     MessageBox.Show("Data Nasabah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
-                    btnLoaddata.PerformClick();
+                    ShowDgvWaste();
                     tbType.Text = tbPrice.Text = null;
                     r = null;
                 }
@@ -247,7 +247,7 @@ namespace wasty
                     {
                         MessageBox.Show("Data Nasabah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
-                        btnLoaddata.PerformClick();
+                        ShowDgvWaste();
                         tbType.Text = tbPrice.Text = null;
                         r = null;
                     }

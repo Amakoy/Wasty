@@ -50,7 +50,6 @@ namespace wasty
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnLoaddata = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -273,27 +272,12 @@ namespace wasty
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnLoaddata
-            // 
-            this.btnLoaddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
-            this.btnLoaddata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaddata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoaddata.ForeColor = System.Drawing.Color.White;
-            this.btnLoaddata.Location = new System.Drawing.Point(1016, 94);
-            this.btnLoaddata.Name = "btnLoaddata";
-            this.btnLoaddata.Size = new System.Drawing.Size(107, 40);
-            this.btnLoaddata.TabIndex = 33;
-            this.btnLoaddata.Text = "Load Data";
-            this.btnLoaddata.UseVisualStyleBackColor = false;
-            this.btnLoaddata.Click += new System.EventHandler(this.btnLoaddata_Click);
-            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1152, 605);
-            this.Controls.Add(this.btnLoaddata);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
@@ -348,6 +332,5 @@ namespace wasty
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnLoaddata;
     }
 }

@@ -29,6 +29,7 @@ namespace wasty
         private void AddCustomer_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
+            ShowCustDgv();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace wasty
                 {
                     MessageBox.Show("Data Nasabah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
-                    btnLoaddata.PerformClick();
+                    ShowCustDgv();
                     tbNama.Text = tbHp.Text = tbAlamat.Text = null;
                 }
 
@@ -139,7 +140,26 @@ namespace wasty
             
         }
 
-        private void btnLoaddata_Click(object sender, EventArgs e)
+        /*private void btnLoaddata_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                dgvCustomer.DataSource = null;
+                sql = "select * from  select_cust()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvCustomer.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }*/
+        private void ShowCustDgv()
         {
             try
             {
@@ -185,7 +205,7 @@ namespace wasty
                 {
                     MessageBox.Show("Data Nasabah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
-                    btnLoaddata.PerformClick();
+                    ShowCustDgv();
                     tbNama.Text = tbHp.Text = tbAlamat.Text = null;
                     r = null;
                 }
@@ -217,7 +237,7 @@ namespace wasty
                     {
                         MessageBox.Show("Data Nasabah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
-                        btnLoaddata.PerformClick();
+                        ShowCustDgv();
                         tbNama.Text = tbHp.Text = tbAlamat.Text = null;
                         r = null;
                     }
