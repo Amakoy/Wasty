@@ -26,7 +26,7 @@ namespace wasty
             get { return _password; }
             set { _password = value; }
         }
-        public string Name
+        public string FullName
         {
             get { return _fullName; }
             set { _fullName = value; }
@@ -40,19 +40,7 @@ namespace wasty
         //methods
         public Boolean Login(string userName, string password)
         {
-            //dummy login database
-            if (userName == "Admin" & password == "Admin1010")
-            {
-                return true;
-            }
-            else if(userName == "User01" & password == "User01")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            } 
+            return true;
         }
         public void ShowCustomer()
         {

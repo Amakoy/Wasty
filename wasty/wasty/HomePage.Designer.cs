@@ -41,10 +41,12 @@ namespace wasty
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblActiveAdm = new System.Windows.Forms.Label();
+            this.lblAdmEmail = new System.Windows.Forms.Label();
+            this.lblAdmName = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -56,6 +58,9 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -172,42 +177,70 @@ namespace wasty
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblWelcome.Location = new System.Drawing.Point(539, 20);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(168, 67);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Home";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblActiveAdm);
+            this.panel2.Controls.Add(this.lblAdmEmail);
+            this.panel2.Controls.Add(this.lblAdmName);
+            this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(146, 137);
+            this.panel2.Location = new System.Drawing.Point(179, 227);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(935, 233);
+            this.panel2.Size = new System.Drawing.Size(715, 255);
             this.panel2.TabIndex = 2;
             // 
-            // panel3
+            // lblActiveAdm
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(146, 393);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(277, 178);
-            this.panel3.TabIndex = 3;
+            this.lblActiveAdm.AutoSize = true;
+            this.lblActiveAdm.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblActiveAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblActiveAdm.Location = new System.Drawing.Point(33, 22);
+            this.lblActiveAdm.Name = "lblActiveAdm";
+            this.lblActiveAdm.Size = new System.Drawing.Size(137, 31);
+            this.lblActiveAdm.TabIndex = 6;
+            this.lblActiveAdm.Text = "Admin Aktif";
             // 
-            // panel4
+            // lblAdmEmail
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(443, 393);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(638, 178);
-            this.panel4.TabIndex = 4;
+            this.lblAdmEmail.AutoSize = true;
+            this.lblAdmEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdmEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblAdmEmail.Location = new System.Drawing.Point(235, 140);
+            this.lblAdmEmail.Name = "lblAdmEmail";
+            this.lblAdmEmail.Size = new System.Drawing.Size(106, 23);
+            this.lblAdmEmail.TabIndex = 5;
+            this.lblAdmEmail.Text = "Email Admin";
+            // 
+            // lblAdmName
+            // 
+            this.lblAdmName.AutoSize = true;
+            this.lblAdmName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdmName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblAdmName.Location = new System.Drawing.Point(214, 88);
+            this.lblAdmName.Name = "lblAdmName";
+            this.lblAdmName.Size = new System.Drawing.Size(205, 41);
+            this.lblAdmName.TabIndex = 4;
+            this.lblAdmName.Text = "Hello Admin!";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(33, 74);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(179, 89);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(372, 112);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
             // 
             // HomePage
             // 
@@ -215,10 +248,8 @@ namespace wasty
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1152, 605);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.panel1);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -236,18 +267,18 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel6;
@@ -258,5 +289,10 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lblAdmName;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lblAdmEmail;
+        private System.Windows.Forms.Label lblActiveAdm;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

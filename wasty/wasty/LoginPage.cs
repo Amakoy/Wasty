@@ -13,11 +13,13 @@ namespace wasty
     public partial class LoginPage : Form
     {
         private string username;
+        Admin admin = new Admin();
+
         public LoginPage()
         {
             InitializeComponent();
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20)); // border radius
-            this.username = username;
+           
         }
         private NpgsqlConnection conn;
         string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
@@ -55,6 +57,7 @@ namespace wasty
             //Login
             //lblUser.Text = lblUser.Text + username;
             conn = new NpgsqlConnection(connstring);
+           
         }
 
         private void lblClose_Click(object sender, EventArgs e)
@@ -65,7 +68,7 @@ namespace wasty
                 Application.Exit();
             }
         }
-
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -78,12 +81,15 @@ namespace wasty
                 cmd.Parameters.AddWithValue("_adm_pass", tbPassword.Text);
 
                 int result = (int)cmd.ExecuteScalar();
+                admin.Email = tbUsername.Text;
 
                 conn.Close();
 
                 if (result == 1) // login sukses
                 {
-                    HomePage homePage = new HomePage();
+                    //FillAdminInfo();
+
+                    HomePage homePage = new HomePage(tbUsername.Text);
                     homePage.Show();
                     this.Hide();
                 }

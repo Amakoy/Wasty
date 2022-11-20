@@ -141,7 +141,7 @@ namespace wasty
             this.tbUsername.Location = new System.Drawing.Point(134, 228);
             this.tbUsername.MinimumSize = new System.Drawing.Size(450, 51);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.PlaceholderText = "Username";
+            this.tbUsername.PlaceholderText = "Email";
             this.tbUsername.Size = new System.Drawing.Size(450, 44);
             this.tbUsername.TabIndex = 7;
             // 
