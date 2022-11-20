@@ -110,7 +110,7 @@ namespace wasty
             try
             {
                 conn.Open();
-                sql = @"select * from insert_waste(:_customer_name, :_customer_phone, :_customer_address)";
+                sql = @"select * from st_insert(:_customer_name, :_customer_phone, :_customer_address)";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_customer_name", tbNama.Text);
                 cmd.Parameters.AddWithValue("_customer_phone", tbHp.Text);
@@ -194,7 +194,7 @@ namespace wasty
             try
             {
                 conn.Open();
-                sql = @"select * from update_waste(:_customer_id, :_customer_name, :_customer_phone, :_customer_address)";
+                sql = @"select * from st_update(:_customer_id, :_customer_name, :_customer_phone, :_customer_address)";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_customer_id", r.Cells["_customer_id"].Value.ToString());
                 cmd.Parameters.AddWithValue("_customer_name", tbNama.Text);

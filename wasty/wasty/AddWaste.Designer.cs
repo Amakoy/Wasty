@@ -31,6 +31,8 @@ namespace wasty
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWaste));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.cbUnit = new System.Windows.Forms.ComboBox();
+            this.lblWasteUnit = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -50,8 +52,6 @@ namespace wasty
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblWasteUnit = new System.Windows.Forms.Label();
-            this.cbUnit = new System.Windows.Forms.ComboBox();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWaste)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -87,6 +87,28 @@ namespace wasty
             this.mainPanel.Size = new System.Drawing.Size(1046, 609);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // cbUnit
+            // 
+            this.cbUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbUnit.FormattingEnabled = true;
+            this.cbUnit.Items.AddRange(new object[] {
+            "Berat",
+            "Buah"});
+            this.cbUnit.Location = new System.Drawing.Point(46, 289);
+            this.cbUnit.Name = "cbUnit";
+            this.cbUnit.Size = new System.Drawing.Size(275, 36);
+            this.cbUnit.TabIndex = 31;
+            // 
+            // lblWasteUnit
+            // 
+            this.lblWasteUnit.AutoSize = true;
+            this.lblWasteUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblWasteUnit.Location = new System.Drawing.Point(46, 245);
+            this.lblWasteUnit.Name = "lblWasteUnit";
+            this.lblWasteUnit.Size = new System.Drawing.Size(94, 35);
+            this.lblWasteUnit.TabIndex = 30;
+            this.lblWasteUnit.Text = "Satuan";
             // 
             // btnDelete
             // 
@@ -297,28 +319,6 @@ namespace wasty
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lblWasteUnit
-            // 
-            this.lblWasteUnit.AutoSize = true;
-            this.lblWasteUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblWasteUnit.Location = new System.Drawing.Point(46, 245);
-            this.lblWasteUnit.Name = "lblWasteUnit";
-            this.lblWasteUnit.Size = new System.Drawing.Size(94, 35);
-            this.lblWasteUnit.TabIndex = 30;
-            this.lblWasteUnit.Text = "Satuan";
-            // 
-            // cbUnit
-            // 
-            this.cbUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Items.AddRange(new object[] {
-            "Berat",
-            "Buah"});
-            this.cbUnit.Location = new System.Drawing.Point(46, 289);
-            this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(275, 36);
-            this.cbUnit.TabIndex = 31;
             // 
             // AddWaste
             // 
