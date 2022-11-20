@@ -32,6 +32,7 @@ namespace wasty
             System.Windows.Forms.Button btnTotal;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTransaction));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.lblUnit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.cbCustomer = new System.Windows.Forms.ComboBox();
@@ -55,7 +56,6 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblUnit = new System.Windows.Forms.Label();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
@@ -108,7 +108,16 @@ namespace wasty
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1053, 610);
             this.mainPanel.TabIndex = 0;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // lblUnit
+            // 
+            this.lblUnit.AutoSize = true;
+            this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnit.Location = new System.Drawing.Point(169, 380);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.Size = new System.Drawing.Size(166, 20);
+            this.lblUnit.TabIndex = 39;
+            this.lblUnit.Text = " (                            )";
             // 
             // label1
             // 
@@ -264,7 +273,6 @@ namespace wasty
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(110, 615);
             this.sidePanel.TabIndex = 1;
-            this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
             // panel4
             // 
@@ -345,16 +353,6 @@ namespace wasty
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lblUnit
-            // 
-            this.lblUnit.AutoSize = true;
-            this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnit.Location = new System.Drawing.Point(169, 380);
-            this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(166, 20);
-            this.lblUnit.TabIndex = 39;
-            this.lblUnit.Text = " (                            )";
             // 
             // AddTransaction
             // 

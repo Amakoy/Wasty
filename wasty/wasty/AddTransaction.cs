@@ -14,13 +14,12 @@ namespace wasty
     public partial class AddTransaction : Form
     {
         Transaction trans = new Transaction();
-
-
         public AddTransaction()
         {
             InitializeComponent(); 
         }
 
+        //database connection
         private NpgsqlConnection conn;
         string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
         public static NpgsqlCommand cmd;
@@ -59,13 +58,6 @@ namespace wasty
             }
                 
         }
-
-        //private void btnTotal_Click(object sender, EventArgs e)
-        //{
-        //  float price = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture.NumberFormat) * float.Parse(tbBerat.Text, //CultureInfo.InvariantCulture.NumberFormat);
-        //tbTotal.Text = price.ToString();
-        //}
-
         private void FillCbHP()
         {
             conn.Open();
@@ -101,128 +93,13 @@ namespace wasty
             }
             conn.Close();
         }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            HomePage homePage = new HomePage();
-            homePage.Show();
-            this.Hide();
-        }
-
-        private void btnTransaction_Click(object sender, EventArgs e)
-        {
-            AddTransaction addTransaction = new AddTransaction();
-            addTransaction.Show();
-            this.Hide();
-        }
-
-        private void btnCustomers_Click(object sender, EventArgs e)
-        {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
-            this.Hide();
-        }
-
-        private void btnAddWaste_Click(object sender, EventArgs e)
-        {
-            AddWaste addWaste = new AddWaste();
-            addWaste.Show();
-            this.Hide();
-        }
-
-        private void btnRecords_Click(object sender, EventArgs e)
-        {
-            ShowRecords showRecords = new ShowRecords();
-            showRecords.Show();
-            this.Hide();
-        }
-
-        private void AddTransaction_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void sidePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            HomePage Home = new HomePage();
-            Home.Show();
-            this.Hide();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
-            this.Hide();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            AddWaste addWaste = new AddWaste();
-            addWaste.Show();
-            this.Hide();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            ShowRecords showRecords = new ShowRecords();
-            showRecords.Show();
-            this.Hide();
-        }
-
-        private void btnLoaddata_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbWasteType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from waste where waste_type='"+cbWasteType.SelectedItem.ToString()+"'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                lblUnitPrice.Text = dr["waste_price"].ToString();
-                lblUnit.Text = dr["waste_unit"].ToString();
-            }
-            conn.Close();
-        }
-        private void cbCustomer_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-            NpgsqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from customer where customer_name='" + cbCustomer.SelectedItem.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            conn.Close();
-        }
-        private void dgvTransaksi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 conn.Open();
 
-                if(tbTanggal.Text == "")
+                if (tbTanggal.Text == "")
                 {
                     sql = @"select * from st_insert_record(:_weight_of_goods, :_total_price, :_customer_name)";
                     cmd = new NpgsqlCommand(sql, conn);
@@ -254,10 +131,66 @@ namespace wasty
                 MessageBox.Show("Error:" + ex.Message, "Add FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        private void cbWasteType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            conn.Open();
 
+            NpgsqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from waste where waste_type='"+cbWasteType.SelectedItem.ToString()+"'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblUnitPrice.Text = dr["waste_price"].ToString();
+                lblUnit.Text = dr["waste_unit"].ToString();
+            }
+            conn.Close();
+        }
+        private void cbCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+            NpgsqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from customer where customer_name='" + cbCustomer.SelectedItem.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            conn.Close();
+        }
+
+        // sidebar navigation
+        private void AddTransaction_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            HomePage Home = new HomePage();
+            Home.Show();
+            this.Hide();
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.Show();
+            this.Hide();
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddWaste addWaste = new AddWaste();
+            addWaste.Show();
+            this.Hide();
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ShowRecords showRecords = new ShowRecords();
+            showRecords.Show();
+            this.Hide();
         }
     }
     

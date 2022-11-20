@@ -38,10 +38,6 @@ namespace wasty
         }
 
         //methods
-        public Boolean Login(string userName, string password)
-        {
-            return true;
-        }
         public void ShowCustomer()
         {
             

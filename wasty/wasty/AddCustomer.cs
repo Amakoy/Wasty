@@ -17,10 +17,9 @@ namespace wasty
             InitializeComponent();
         }
 
-
+        // database connection 
         private NpgsqlConnection conn;
         string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
-        //public static NpgsqlConnection conn = new NpgsqlConnection(connectionString: connstring);
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
@@ -31,80 +30,25 @@ namespace wasty
             conn = new NpgsqlConnection(connstring);
             ShowCustDgv();
         }
-
-        private void btnHome_Click(object sender, EventArgs e)
+        private void ShowCustDgv()
         {
-            HomePage homePage = new HomePage();
-            homePage.Show();
-            this.Hide();
+            try
+            {
+                conn.Open();
+                dgvCustomer.DataSource = null;
+                sql = "select * from  select_cust()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvCustomer.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-        private void btnTransaction_Click(object sender, EventArgs e)
-        {
-            AddTransaction addTransaction = new AddTransaction();
-            addTransaction.Show();
-            this.Hide();
-        }
-
-        private void btnCustomers_Click(object sender, EventArgs e)
-        {
-            /*AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
-            this.Hide();*/
-        }
-
-        private void btnAddWaste_Click(object sender, EventArgs e)
-        {
-            AddWaste addWaste = new AddWaste();
-            addWaste.Show();
-            this.Hide();
-        }
-
-        private void btnRecords_Click(object sender, EventArgs e)
-        {
-            ShowRecords showRecords = new ShowRecords();
-            showRecords.Show();
-            this.Hide();
-        }
-
-        private void lblNama_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddCustomer_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            HomePage Home = new HomePage();
-            Home.Show();
-            this.Hide();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            AddTransaction AddTrans = new AddTransaction();
-            AddTrans.Show();
-            this.Hide();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            ShowRecords ShowRec = new ShowRecords();
-            ShowRec.Show();
-            this.Hide();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            AddWaste addWaste = new AddWaste();
-            addWaste.Show();
-            this.Hide();
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -128,60 +72,6 @@ namespace wasty
             {
                 MessageBox.Show("Error:" + ex.Message, "Add FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        /*private void btnLoaddata_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conn.Open();
-                dgvCustomer.DataSource = null;
-                sql = "select * from  select_cust()";
-                cmd = new NpgsqlCommand(sql, conn);
-                dt = new DataTable();
-                NpgsqlDataReader rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                dgvCustomer.DataSource = dt;
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
-        private void ShowCustDgv()
-        {
-            try
-            {
-                conn.Open();
-                dgvCustomer.DataSource = null;
-                sql = "select * from  select_cust()";
-                cmd = new NpgsqlCommand(sql, conn);
-                dt = new DataTable();
-                NpgsqlDataReader rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                dgvCustomer.DataSource = dt;
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -215,7 +105,6 @@ namespace wasty
                 MessageBox.Show("Error:" + ex.Message, "Update FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (r == null)
@@ -247,7 +136,6 @@ namespace wasty
                     MessageBox.Show("Error:" + ex.Message, "Delete FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
-
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -257,6 +145,40 @@ namespace wasty
                 tbHp.Text = r.Cells["_customer_phone"].Value.ToString();
                 tbAlamat.Text = r.Cells["_customer_address"].Value.ToString();
             }
+        }
+
+        // sidebar navigation
+        private void AddCustomer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            HomePage Home = new HomePage();
+            Home.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddTransaction AddTrans = new AddTransaction();
+            AddTrans.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ShowRecords ShowRec = new ShowRecords();
+            ShowRec.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AddWaste addWaste = new AddWaste();
+            addWaste.Show();
+            this.Hide();
         }
     }
 }

@@ -59,16 +59,6 @@ namespace wasty
             conn = new NpgsqlConnection(connstring);
            
         }
-
-        private void lblClose_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Yakin ingin keluar?", "Exit Application", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-        
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -106,25 +96,13 @@ namespace wasty
             }
         }
 
-        /*private void btnLogin_Click(object sender, EventArgs e)
+        private void lblClose_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "" || tbPassword.Text == "")
+            DialogResult result = MessageBox.Show("Yakin ingin keluar?", "Exit Application", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Masukkan Username and Password");
+                Application.Exit();
             }
-            else
-            {
-                if (tbUsername.Text == "admin" && tbPassword.Text == "admin")
-                {
-                    HomePage homePage = new HomePage();
-                    homePage.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Username atau Password salah");
-                }
-            }
-        }*/
+        }
     }
 }

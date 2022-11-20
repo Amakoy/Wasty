@@ -20,30 +20,25 @@ namespace wasty
         private DataGridViewRow r;
 
         Admin admin = new Admin();
-        
+        private string username;
+
         public HomePage(string username)
         {
             this.username = username;
             InitializeComponent();
         }
-
         public HomePage()
         {
             InitializeComponent();
         }
-        private string username;
-
         private void HomePage_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
-            //lblAdmName.Text = 
-            //lblAdmEmail.Text = admin.Email.ToString();
             lblAdmEmail.Text = username;
             FillAdminInfo();
         }
         private void FillAdminInfo()
         {
-
             conn.Open();
 
             NpgsqlCommand cmd = conn.CreateCommand();
@@ -63,39 +58,8 @@ namespace wasty
         {
             Application.Exit();
         }
-        private void btnHome_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnTransaction_Click_1(object sender, EventArgs e)
-        {
-            AddTransaction addTransaction = new AddTransaction();
-            addTransaction.Show();
-            this.Hide();
-        }
-
-        private void btnCustomers_Click(object sender, EventArgs e)
-        {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
-            this.Hide();
-        }
-
-        private void btnAddWaste_Click(object sender, EventArgs e)
-        {
-            AddWaste addWaste = new AddWaste();
-            addWaste.Show();
-            this.Hide();
-        }
-
-        private void btnRecords_Click(object sender, EventArgs e)
-        {
-            ShowRecords showRecords = new ShowRecords();
-            showRecords.Show();
-            this.Hide();
-        }
-
+        //sidebar navigation
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             AddTransaction addTransaction = new AddTransaction();

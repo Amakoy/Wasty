@@ -29,9 +29,9 @@ namespace wasty
             InitializeComponent();
         }
 
+        // database connection
         private NpgsqlConnection conn;
         string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
-        //public static NpgsqlConnection conn = new NpgsqlConnection(connectionString: connstring);
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
@@ -49,100 +49,7 @@ namespace wasty
             // text box Price Style
             tbPrice.BorderStyle = BorderStyle.None;
             tbPrice.AutoSize = false;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbType_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // Close page
-        private void lblClose_Click_1(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Yakin ingin keluar?", "Exit Application", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void sidePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-            // panel border
-            ControlPaint.DrawBorder(e.Graphics, this.panel1.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            // panel border
-            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-            // panel border
-            ControlPaint.DrawBorder(e.Graphics, this.panel3.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            // panel border
-            ControlPaint.DrawBorder(e.Graphics, this.panel4.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
-        }
-
-        private void tbType_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            HomePage Home = new HomePage();
-            Home.Show();
-            this.Hide();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            AddTransaction AddTrans = new AddTransaction();
-            AddTrans.Show();
-            this.Hide();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            AddCustomer AddCust = new AddCustomer();
-            AddCust.Show();
-            this.Hide();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            ShowRecords ShowRec = new ShowRecords();
-            ShowRec.Show();
-            this.Hide();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        }  
         private void ShowDgvWaste()
         {
             try
@@ -175,7 +82,7 @@ namespace wasty
                 cmd.Parameters.AddWithValue("_waste_unit", cbUnit.SelectedItem.ToString());
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
-                    MessageBox.Show("Data Nasabah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data Jenis Sampah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     ShowDgvWaste();
                     tbType.Text = tbType.Text = cbUnit.Text = null;
@@ -198,7 +105,6 @@ namespace wasty
                 cbUnit.Text = r.Cells["_waste_unit"].Value.ToString();
             }
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (r == null)
@@ -217,7 +123,7 @@ namespace wasty
                 cmd.Parameters.AddWithValue("_waste_unit", cbUnit.SelectedItem.ToString());
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
-                    MessageBox.Show("Data Nasabah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data Jenis Sampah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     ShowDgvWaste();
                     tbType.Text = tbPrice.Text = cbUnit.Text = null;
@@ -238,7 +144,7 @@ namespace wasty
                 return;
             }
 
-            if (MessageBox.Show("Apakah benar anda ingin menghapsus data " + r.Cells["_waste_type"].Value.ToString() + " ?", "Hapus data terkonfirmasi",
+            if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["_waste_type"].Value.ToString() + " ?", "Hapus data terkonfirmasi",
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
 
                 try
@@ -249,7 +155,7 @@ namespace wasty
                     cmd.Parameters.AddWithValue("_waste_id", r.Cells["_waste_id"].Value.ToString());
                     if ((int)cmd.ExecuteScalar() == 1)
                     {
-                        MessageBox.Show("Data Nasabah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Data Jenis Sampah Berhasil Dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
                         ShowDgvWaste();
                         tbType.Text = tbPrice.Text = null;
@@ -262,9 +168,62 @@ namespace wasty
                 }
         }
 
-        private void dgvWaste_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //sidebar navigtaion
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
+            HomePage Home = new HomePage();
+            Home.Show();
+            this.Hide();
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddTransaction AddTrans = new AddTransaction();
+            AddTrans.Show();
+            this.Hide();
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AddCustomer AddCust = new AddCustomer();
+            AddCust.Show();
+            this.Hide();
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ShowRecords ShowRec = new ShowRecords();
+            ShowRec.Show();
+            this.Hide();
+        }
 
+        // style
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel1.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel3.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel4.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        // Close page
+        private void lblClose_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Yakin ingin keluar?", "Exit Application", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

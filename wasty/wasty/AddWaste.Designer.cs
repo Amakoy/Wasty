@@ -86,7 +86,6 @@ namespace wasty
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1046, 609);
             this.mainPanel.TabIndex = 0;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // cbUnit
             // 
@@ -173,7 +172,6 @@ namespace wasty
             this.dgvWaste.Size = new System.Drawing.Size(625, 426);
             this.dgvWaste.TabIndex = 6;
             this.dgvWaste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellClick);
-            this.dgvWaste.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellContentClick);
             // 
             // tbPrice
             // 
@@ -200,7 +198,6 @@ namespace wasty
             this.tbType.Name = "tbType";
             this.tbType.Size = new System.Drawing.Size(275, 34);
             this.tbType.TabIndex = 2;
-            this.tbType.TextChanged += new System.EventHandler(this.tbType_TextChanged_1);
             // 
             // label2
             // 
@@ -221,7 +218,6 @@ namespace wasty
             this.label1.Size = new System.Drawing.Size(145, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sampah";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // sidePanel
             // 
@@ -234,7 +230,6 @@ namespace wasty
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(110, 609);
             this.sidePanel.TabIndex = 0;
-            this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
             // panel4
             // 

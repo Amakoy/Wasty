@@ -193,7 +193,6 @@ namespace wasty
             this.lblNama.Size = new System.Drawing.Size(121, 20);
             this.lblNama.TabIndex = 11;
             this.lblNama.Text = "Nama Lengkap";
-            this.lblNama.Click += new System.EventHandler(this.lblNama_Click);
             // 
             // tbAlamat
             // 

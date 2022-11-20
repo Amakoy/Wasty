@@ -23,47 +23,33 @@ namespace wasty
         private string sql = null;
         DataTable dt = null;
 
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        private void ShowRecords_Load(object sender, EventArgs e)
         {
+            conn = new NpgsqlConnection(connstring);
+            LoadData();
+        }
+        private void LoadData()
+        {
+            try
+            {
+                
+                conn.Open();
+                sql = @"select * from select_record()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvRecords.DataSource = dt;
+                conn.Close();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Load FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            HomePage homePage = new HomePage();
-            homePage.Show();
-            this.Hide();
-        }
-
-        private void btnTransaksi_Click(object sender, EventArgs e)
-        {
-            AddTransaction addTransaction = new AddTransaction();
-            addTransaction.Show();
-            this.Hide();
-        }
-
-        private void btnCustomers_Click(object sender, EventArgs e)
-        {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
-            this.Hide();
-        }
-
-        private void btnAddWaste_Click(object sender, EventArgs e)
-        {
-            AddWaste addWaste = new AddWaste();
-            addWaste.Show();
-            this.Hide();
-        }
-
-        private void btnRecords_Click(object sender, EventArgs e)
-        {
-            ShowRecords showRecords = new ShowRecords();
-            showRecords.Show();
-            this.Hide();
-        }
-
+        // sidebar navigation
         private void ShowRecords_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -97,36 +83,5 @@ namespace wasty
             this.Hide();
         }
 
-        private void LoadData()
-        {
-            try
-            {
-                
-                conn.Open();
-                sql = @"select * from select_record()";
-                cmd = new NpgsqlCommand(sql, conn);
-                dt = new DataTable();
-                NpgsqlDataReader rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                dgvRecords.DataSource = dt;
-                conn.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Load FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void ShowRecords_Load(object sender, EventArgs e)
-        {
-            conn = new NpgsqlConnection(connstring);
-            LoadData();
-        }
-
-        private void dgvRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
