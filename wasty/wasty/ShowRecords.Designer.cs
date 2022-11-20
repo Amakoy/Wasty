@@ -162,22 +162,22 @@ namespace wasty
             // dgvRecords
             // 
             this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecords.Location = new System.Drawing.Point(51, 116);
+            this.dgvRecords.Location = new System.Drawing.Point(164, 116);
             this.dgvRecords.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRecords.Name = "dgvRecords";
             this.dgvRecords.RowHeadersWidth = 62;
             this.dgvRecords.RowTemplate.Height = 33;
-            this.dgvRecords.Size = new System.Drawing.Size(946, 455);
+            this.dgvRecords.Size = new System.Drawing.Size(689, 455);
             this.dgvRecords.TabIndex = 13;
             // 
             // lblAddSampah
             // 
             this.lblAddSampah.AutoSize = true;
-            this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAddSampah.Font = new System.Drawing.Font("Yu Mincho Demibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAddSampah.Location = new System.Drawing.Point(335, 39);
             this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddSampah.Name = "lblAddSampah";
-            this.lblAddSampah.Size = new System.Drawing.Size(314, 50);
+            this.lblAddSampah.Size = new System.Drawing.Size(312, 47);
             this.lblAddSampah.TabIndex = 12;
             this.lblAddSampah.Text = "Record Transaksi";
             // 

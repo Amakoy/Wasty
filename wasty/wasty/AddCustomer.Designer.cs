@@ -157,75 +157,79 @@ namespace wasty
             // lblJudul
             // 
             this.lblJudul.AutoSize = true;
-            this.lblJudul.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul.Location = new System.Drawing.Point(498, 36);
+            this.lblJudul.Font = new System.Drawing.Font("Yu Mincho Demibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblJudul.Location = new System.Drawing.Point(457, 53);
             this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(155, 45);
+            this.lblJudul.Size = new System.Drawing.Size(310, 43);
             this.lblJudul.TabIndex = 2;
-            this.lblJudul.Text = "Nasabah";
+            this.lblJudul.Text = "Pengelola Nasabah";
             // 
             // lblHp
             // 
             this.lblHp.AutoSize = true;
-            this.lblHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHp.Location = new System.Drawing.Point(142, 219);
+            this.lblHp.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHp.Location = new System.Drawing.Point(158, 235);
             this.lblHp.Name = "lblHp";
-            this.lblHp.Size = new System.Drawing.Size(88, 20);
+            this.lblHp.Size = new System.Drawing.Size(92, 22);
             this.lblHp.TabIndex = 13;
             this.lblHp.Text = "Nomor HP";
             // 
             // lblJenis
             // 
             this.lblJenis.AutoSize = true;
-            this.lblJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJenis.Location = new System.Drawing.Point(142, 283);
+            this.lblJenis.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJenis.Location = new System.Drawing.Point(158, 313);
             this.lblJenis.Name = "lblJenis";
-            this.lblJenis.Size = new System.Drawing.Size(61, 20);
+            this.lblJenis.Size = new System.Drawing.Size(63, 22);
             this.lblJenis.TabIndex = 12;
             this.lblJenis.Text = "Alamat";
             // 
             // lblNama
             // 
             this.lblNama.AutoSize = true;
-            this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNama.Location = new System.Drawing.Point(142, 159);
+            this.lblNama.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNama.Location = new System.Drawing.Point(158, 159);
             this.lblNama.Name = "lblNama";
-            this.lblNama.Size = new System.Drawing.Size(121, 20);
+            this.lblNama.Size = new System.Drawing.Size(123, 22);
             this.lblNama.TabIndex = 11;
             this.lblNama.Text = "Nama Lengkap";
             // 
             // tbAlamat
             // 
-            this.tbAlamat.Location = new System.Drawing.Point(142, 310);
+            this.tbAlamat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbAlamat.Location = new System.Drawing.Point(158, 340);
             this.tbAlamat.Margin = new System.Windows.Forms.Padding(2);
             this.tbAlamat.Name = "tbAlamat";
-            this.tbAlamat.Size = new System.Drawing.Size(310, 27);
+            this.tbAlamat.Size = new System.Drawing.Size(343, 34);
             this.tbAlamat.TabIndex = 18;
             // 
             // tbHp
             // 
-            this.tbHp.Location = new System.Drawing.Point(142, 246);
+            this.tbHp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbHp.Location = new System.Drawing.Point(158, 262);
             this.tbHp.Margin = new System.Windows.Forms.Padding(2);
             this.tbHp.Name = "tbHp";
-            this.tbHp.Size = new System.Drawing.Size(310, 27);
+            this.tbHp.Size = new System.Drawing.Size(343, 34);
             this.tbHp.TabIndex = 16;
             // 
             // tbNama
             // 
-            this.tbNama.Location = new System.Drawing.Point(142, 185);
+            this.tbNama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNama.Location = new System.Drawing.Point(158, 193);
             this.tbNama.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNama.MinimumSize = new System.Drawing.Size(343, 35);
             this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(310, 27);
+            this.tbNama.Size = new System.Drawing.Size(343, 34);
             this.tbNama.TabIndex = 15;
             // 
             // dgvCustomer
             // 
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.Location = new System.Drawing.Point(498, 149);
+            this.dgvCustomer.Location = new System.Drawing.Point(548, 149);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowHeadersWidth = 51;
             this.dgvCustomer.RowTemplate.Height = 29;
-            this.dgvCustomer.Size = new System.Drawing.Size(625, 426);
+            this.dgvCustomer.Size = new System.Drawing.Size(575, 426);
             this.dgvCustomer.TabIndex = 20;
             this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             // 
@@ -235,9 +239,9 @@ namespace wasty
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(368, 360);
+            this.btnDelete.Location = new System.Drawing.Point(394, 399);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(84, 40);
+            this.btnDelete.Size = new System.Drawing.Size(107, 40);
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -249,7 +253,7 @@ namespace wasty
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(142, 360);
+            this.btnAdd.Location = new System.Drawing.Point(158, 399);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(107, 40);
             this.btnAdd.TabIndex = 32;
@@ -263,7 +267,7 @@ namespace wasty
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(255, 360);
+            this.btnEdit.Location = new System.Drawing.Point(276, 399);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(107, 40);
             this.btnEdit.TabIndex = 30;

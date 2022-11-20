@@ -192,6 +192,11 @@ namespace wasty
             showRecords.Show();
             this.Hide();
         }
+
+        private void lblBerat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

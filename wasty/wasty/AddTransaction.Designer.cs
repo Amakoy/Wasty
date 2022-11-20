@@ -32,9 +32,8 @@ namespace wasty
             System.Windows.Forms.Button btnTotal;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTransaction));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.lblUnit = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblUnitPrice = new System.Windows.Forms.Label();
             this.cbCustomer = new System.Windows.Forms.ComboBox();
             this.cbWasteType = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -56,6 +55,8 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUnit = new System.Windows.Forms.TextBox();
+            this.lblUnitPrice = new System.Windows.Forms.TextBox();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
@@ -73,23 +74,24 @@ namespace wasty
             // 
             btnTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(192)))), ((int)(((byte)(123)))));
             btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnTotal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTotal.ForeColor = System.Drawing.Color.White;
-            btnTotal.Location = new System.Drawing.Point(373, 489);
+            btnTotal.Location = new System.Drawing.Point(642, 256);
             btnTotal.Margin = new System.Windows.Forms.Padding(2);
             btnTotal.Name = "btnTotal";
-            btnTotal.Size = new System.Drawing.Size(106, 33);
+            btnTotal.Size = new System.Drawing.Size(231, 40);
             btnTotal.TabIndex = 5;
-            btnTotal.Text = "Hitung total";
+            btnTotal.Text = "Hitung Total";
             btnTotal.UseVisualStyleBackColor = false;
             btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
-            this.mainPanel.Controls.Add(this.lblUnit);
-            this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.lblUnitPrice);
+            this.mainPanel.Controls.Add(this.lblUnit);
+            this.mainPanel.Controls.Add(this.label2);
+            this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.cbCustomer);
             this.mainPanel.Controls.Add(this.cbWasteType);
             this.mainPanel.Controls.Add(this.btnAdd);
@@ -103,50 +105,41 @@ namespace wasty
             this.mainPanel.Controls.Add(this.tbTotal);
             this.mainPanel.Controls.Add(this.tbBerat);
             this.mainPanel.Controls.Add(this.tbTanggal);
-            this.mainPanel.Location = new System.Drawing.Point(106, 0);
+            this.mainPanel.Location = new System.Drawing.Point(106, -2);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1053, 610);
             this.mainPanel.TabIndex = 0;
             // 
-            // lblUnit
+            // label2
             // 
-            this.lblUnit.AutoSize = true;
-            this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnit.Location = new System.Drawing.Point(169, 380);
-            this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(166, 20);
-            this.lblUnit.TabIndex = 39;
-            this.lblUnit.Text = " (                            )";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(91, 474);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 22);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Harga perUnit";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(169, 356);
+            this.label1.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(91, 391);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(109, 22);
             this.label1.TabIndex = 38;
             this.label1.Text = "Unit Sampah";
-            // 
-            // lblUnitPrice
-            // 
-            this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUnitPrice.Location = new System.Drawing.Point(168, 489);
-            this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(116, 20);
-            this.lblUnitPrice.TabIndex = 37;
-            this.lblUnitPrice.Text = "Harga per unit";
             // 
             // cbCustomer
             // 
             this.cbCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCustomer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(169, 258);
+            this.cbCustomer.Location = new System.Drawing.Point(91, 260);
             this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(310, 28);
+            this.cbCustomer.Size = new System.Drawing.Size(390, 36);
             this.cbCustomer.TabIndex = 36;
             this.cbCustomer.SelectedIndexChanged += new System.EventHandler(this.cbCustomer_SelectedIndexChanged);
             // 
@@ -154,10 +147,11 @@ namespace wasty
             // 
             this.cbWasteType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbWasteType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbWasteType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbWasteType.FormattingEnabled = true;
-            this.cbWasteType.Location = new System.Drawing.Point(169, 319);
+            this.cbWasteType.Location = new System.Drawing.Point(91, 343);
             this.cbWasteType.Name = "cbWasteType";
-            this.cbWasteType.Size = new System.Drawing.Size(310, 28);
+            this.cbWasteType.Size = new System.Drawing.Size(390, 36);
             this.cbWasteType.TabIndex = 35;
             this.cbWasteType.SelectedIndexChanged += new System.EventHandler(this.cbWasteType_SelectedIndexChanged);
             // 
@@ -167,9 +161,9 @@ namespace wasty
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(563, 308);
+            this.btnAdd.Location = new System.Drawing.Point(642, 509);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(310, 40);
+            this.btnAdd.Size = new System.Drawing.Size(232, 36);
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -178,87 +172,93 @@ namespace wasty
             // lblAddSampah
             // 
             this.lblAddSampah.AutoSize = true;
-            this.lblAddSampah.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAddSampah.Location = new System.Drawing.Point(347, 34);
+            this.lblAddSampah.Font = new System.Drawing.Font("Yu Mincho Demibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAddSampah.Location = new System.Drawing.Point(347, 49);
             this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddSampah.Name = "lblAddSampah";
-            this.lblAddSampah.Size = new System.Drawing.Size(297, 45);
+            this.lblAddSampah.Size = new System.Drawing.Size(300, 43);
             this.lblAddSampah.TabIndex = 12;
             this.lblAddSampah.Text = "Transaksi Sampah";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotal.Location = new System.Drawing.Point(563, 237);
+            this.lblTotal.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotal.Location = new System.Drawing.Point(560, 393);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(97, 20);
+            this.lblTotal.Size = new System.Drawing.Size(100, 22);
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "Total Harga";
             // 
             // lblBerat
             // 
             this.lblBerat.AutoSize = true;
-            this.lblBerat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBerat.Location = new System.Drawing.Point(169, 416);
+            this.lblBerat.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBerat.Location = new System.Drawing.Point(560, 151);
             this.lblBerat.Name = "lblBerat";
-            this.lblBerat.Size = new System.Drawing.Size(176, 20);
+            this.lblBerat.Size = new System.Drawing.Size(178, 22);
             this.lblBerat.TabIndex = 10;
             this.lblBerat.Text = "Berat/Banyak Sampah";
+            this.lblBerat.Click += new System.EventHandler(this.lblBerat_Click);
             // 
             // lblHp
             // 
             this.lblHp.AutoSize = true;
-            this.lblHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHp.Location = new System.Drawing.Point(169, 231);
+            this.lblHp.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHp.Location = new System.Drawing.Point(91, 229);
             this.lblHp.Name = "lblHp";
-            this.lblHp.Size = new System.Drawing.Size(131, 20);
+            this.lblHp.Size = new System.Drawing.Size(131, 22);
             this.lblHp.TabIndex = 9;
             this.lblHp.Text = "Nama Customer";
             // 
             // lblJenis
             // 
             this.lblJenis.AutoSize = true;
-            this.lblJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJenis.Location = new System.Drawing.Point(169, 295);
+            this.lblJenis.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJenis.Location = new System.Drawing.Point(91, 312);
             this.lblJenis.Name = "lblJenis";
-            this.lblJenis.Size = new System.Drawing.Size(115, 20);
+            this.lblJenis.Size = new System.Drawing.Size(110, 22);
             this.lblJenis.TabIndex = 8;
             this.lblJenis.Text = "Jenis Sampah";
             // 
             // lbTanggal
             // 
             this.lbTanggal.AutoSize = true;
-            this.lbTanggal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTanggal.Location = new System.Drawing.Point(169, 171);
+            this.lbTanggal.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbTanggal.Location = new System.Drawing.Point(91, 149);
             this.lbTanggal.Name = "lbTanggal";
-            this.lbTanggal.Size = new System.Drawing.Size(68, 20);
+            this.lbTanggal.Size = new System.Drawing.Size(71, 22);
             this.lbTanggal.TabIndex = 7;
             this.lbTanggal.Text = "Tanggal";
             // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(563, 259);
+            this.tbTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbTotal.Location = new System.Drawing.Point(560, 424);
             this.tbTotal.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTotal.MinimumSize = new System.Drawing.Size(390, 36);
             this.tbTotal.Name = "tbTotal";
-            this.tbTotal.Size = new System.Drawing.Size(310, 27);
+            this.tbTotal.ReadOnly = true;
+            this.tbTotal.Size = new System.Drawing.Size(390, 36);
             this.tbTotal.TabIndex = 4;
             // 
             // tbBerat
             // 
-            this.tbBerat.Location = new System.Drawing.Point(169, 439);
+            this.tbBerat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbBerat.Location = new System.Drawing.Point(560, 181);
             this.tbBerat.Margin = new System.Windows.Forms.Padding(2);
             this.tbBerat.Name = "tbBerat";
-            this.tbBerat.Size = new System.Drawing.Size(310, 27);
+            this.tbBerat.Size = new System.Drawing.Size(390, 34);
             this.tbBerat.TabIndex = 2;
             // 
             // tbTanggal
             // 
-            this.tbTanggal.Location = new System.Drawing.Point(169, 193);
+            this.tbTanggal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbTanggal.Location = new System.Drawing.Point(91, 183);
             this.tbTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTanggal.Name = "tbTanggal";
             this.tbTanggal.PlaceholderText = " TTTT/BB/HH (Kosongkan jika pada hari ini)";
-            this.tbTanggal.Size = new System.Drawing.Size(310, 27);
+            this.tbTanggal.Size = new System.Drawing.Size(390, 34);
             this.tbTanggal.TabIndex = 0;
             // 
             // sidePanel
@@ -354,6 +354,28 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblUnit
+            // 
+            this.lblUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnit.Location = new System.Drawing.Point(91, 426);
+            this.lblUnit.Margin = new System.Windows.Forms.Padding(2);
+            this.lblUnit.MinimumSize = new System.Drawing.Size(390, 36);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.ReadOnly = true;
+            this.lblUnit.Size = new System.Drawing.Size(390, 36);
+            this.lblUnit.TabIndex = 41;
+            // 
+            // lblUnitPrice
+            // 
+            this.lblUnitPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnitPrice.Location = new System.Drawing.Point(91, 509);
+            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.lblUnitPrice.MinimumSize = new System.Drawing.Size(390, 36);
+            this.lblUnitPrice.Name = "lblUnitPrice";
+            this.lblUnitPrice.ReadOnly = true;
+            this.lblUnitPrice.Size = new System.Drawing.Size(390, 36);
+            this.lblUnitPrice.TabIndex = 42;
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -407,8 +429,9 @@ namespace wasty
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cbWasteType;
         private System.Windows.Forms.ComboBox cbCustomer;
-        private System.Windows.Forms.Label lblUnitPrice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblUnit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox lblUnitPrice;
+        private System.Windows.Forms.TextBox lblUnit;
     }
 }

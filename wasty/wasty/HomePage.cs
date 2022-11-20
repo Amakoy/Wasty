@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Npgsql;
+using System.Runtime.InteropServices; // library untuk border radius
 
 namespace wasty
 {
@@ -26,16 +27,32 @@ namespace wasty
         {
             this.username = username;
             InitializeComponent();
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20)); // border radius
         }
         public HomePage()
         {
             InitializeComponent();
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20)); // border radius
         }
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] // import untuk border radius
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            // untuk membuat border radius
+            int nLeftRect,          // x-coordinate of upper-left corner
+            int nTopRect,           // y-coordinate of upper-left corner
+            int nRightRect,         // x-coordinate of lower-right corner
+            int nBottonRect,        // y-coordinate of lower-right corner
+            int nWidthEllipse,       // width of ellipse
+            int nHeightEllipse       // height of ellipse
+        );
         private void HomePage_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
             lblAdmEmail.Text = username;
             FillAdminInfo();
+
+            // admin panel style
+            adminPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, adminPanel.Width, adminPanel.Height, 45, 45));
         }
         private void FillAdminInfo()
         {
