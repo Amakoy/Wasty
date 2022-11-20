@@ -50,6 +50,8 @@ namespace wasty
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblWasteUnit = new System.Windows.Forms.Label();
+            this.cbUnit = new System.Windows.Forms.ComboBox();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWaste)).BeginInit();
             this.sidePanel.SuspendLayout();
@@ -67,6 +69,8 @@ namespace wasty
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mainPanel.Controls.Add(this.cbUnit);
+            this.mainPanel.Controls.Add(this.lblWasteUnit);
             this.mainPanel.Controls.Add(this.btnDelete);
             this.mainPanel.Controls.Add(this.btnAdd);
             this.mainPanel.Controls.Add(this.btnUpdate);
@@ -90,7 +94,7 @@ namespace wasty
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(243, 363);
+            this.btnDelete.Location = new System.Drawing.Point(243, 451);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(78, 40);
             this.btnDelete.TabIndex = 28;
@@ -104,7 +108,7 @@ namespace wasty
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(46, 363);
+            this.btnAdd.Location = new System.Drawing.Point(46, 451);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(95, 40);
             this.btnAdd.TabIndex = 29;
@@ -118,7 +122,7 @@ namespace wasty
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(145, 363);
+            this.btnUpdate.Location = new System.Drawing.Point(145, 451);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(95, 40);
             this.btnUpdate.TabIndex = 27;
@@ -152,7 +156,7 @@ namespace wasty
             // tbPrice
             // 
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPrice.Location = new System.Drawing.Point(46, 307);
+            this.tbPrice.Location = new System.Drawing.Point(46, 395);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(275, 34);
             this.tbPrice.TabIndex = 4;
@@ -161,11 +165,11 @@ namespace wasty
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(46, 250);
+            this.label3.Location = new System.Drawing.Point(46, 348);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 35);
+            this.label3.Size = new System.Drawing.Size(210, 35);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Harga Sampah";
+            this.label3.Text = "Harga per satuan";
             // 
             // tbType
             // 
@@ -294,6 +298,28 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblWasteUnit
+            // 
+            this.lblWasteUnit.AutoSize = true;
+            this.lblWasteUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblWasteUnit.Location = new System.Drawing.Point(46, 245);
+            this.lblWasteUnit.Name = "lblWasteUnit";
+            this.lblWasteUnit.Size = new System.Drawing.Size(94, 35);
+            this.lblWasteUnit.TabIndex = 30;
+            this.lblWasteUnit.Text = "Satuan";
+            // 
+            // cbUnit
+            // 
+            this.cbUnit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbUnit.FormattingEnabled = true;
+            this.cbUnit.Items.AddRange(new object[] {
+            "Berat",
+            "Buah"});
+            this.cbUnit.Location = new System.Drawing.Point(46, 289);
+            this.cbUnit.Name = "cbUnit";
+            this.cbUnit.Size = new System.Drawing.Size(275, 36);
+            this.cbUnit.TabIndex = 31;
+            // 
             // AddWaste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -344,5 +370,7 @@ namespace wasty
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblWasteUnit;
+        private System.Windows.Forms.ComboBox cbUnit;
     }
 }

@@ -34,7 +34,7 @@ namespace wasty
         }
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            string wasteUnit = cbWasteUnit.SelectedItem.ToString();
+            string wasteUnit = lblUnit.Text;
             float unitPrice = float.Parse(lblUnitPrice.Text, CultureInfo.InvariantCulture);
 
             if (wasteUnit == "Berat")
@@ -194,6 +194,7 @@ namespace wasty
             foreach (DataRow dr in dt.Rows)
             {
                 lblUnitPrice.Text = dr["waste_price"].ToString();
+                lblUnit.Text = dr["waste_unit"].ToString();
             }
             conn.Close();
         }
@@ -254,9 +255,10 @@ namespace wasty
             }
         }
 
-        
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
 
-
+        }
     }
     
 }

@@ -32,6 +32,7 @@ namespace wasty
             System.Windows.Forms.Button btnTotal;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTransaction));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.cbCustomer = new System.Windows.Forms.ComboBox();
             this.cbWasteType = new System.Windows.Forms.ComboBox();
@@ -54,8 +55,7 @@ namespace wasty
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbWasteUnit = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUnit = new System.Windows.Forms.Label();
             btnTotal = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
@@ -87,7 +87,7 @@ namespace wasty
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
-            this.mainPanel.Controls.Add(this.cbWasteUnit);
+            this.mainPanel.Controls.Add(this.lblUnit);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.lblUnitPrice);
             this.mainPanel.Controls.Add(this.cbCustomer);
@@ -108,6 +108,17 @@ namespace wasty
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1053, 610);
             this.mainPanel.TabIndex = 0;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(169, 356);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Unit Sampah";
             // 
             // lblUnitPrice
             // 
@@ -335,28 +346,15 @@ namespace wasty
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // cbWasteUnit
+            // lblUnit
             // 
-            this.cbWasteUnit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbWasteUnit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbWasteUnit.FormattingEnabled = true;
-            this.cbWasteUnit.Items.AddRange(new object[] {
-            "Berat",
-            "Buah"});
-            this.cbWasteUnit.Location = new System.Drawing.Point(169, 380);
-            this.cbWasteUnit.Name = "cbWasteUnit";
-            this.cbWasteUnit.Size = new System.Drawing.Size(310, 28);
-            this.cbWasteUnit.TabIndex = 39;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(169, 356);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Unit Sampah";
+            this.lblUnit.AutoSize = true;
+            this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUnit.Location = new System.Drawing.Point(169, 380);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.Size = new System.Drawing.Size(166, 20);
+            this.lblUnit.TabIndex = 39;
+            this.lblUnit.Text = " (                            )";
             // 
             // AddTransaction
             // 
@@ -412,7 +410,7 @@ namespace wasty
         private System.Windows.Forms.ComboBox cbWasteType;
         private System.Windows.Forms.ComboBox cbCustomer;
         private System.Windows.Forms.Label lblUnitPrice;
-        private System.Windows.Forms.ComboBox cbWasteUnit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUnit;
     }
 }

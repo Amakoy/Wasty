@@ -40,6 +40,7 @@ namespace wasty
         private void AddWaste_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
+            ShowDgvWaste();
 
             // text box Type Style
             tbType.BorderStyle = BorderStyle.None;
@@ -148,7 +149,7 @@ namespace wasty
             {
                 conn.Open();
                 dgvWaste.DataSource = null;
-                sql = "select * from  st_select()";
+                sql = "select * from  select_waste()";
                 cmd = new NpgsqlCommand(sql, conn);
                 dt = new DataTable();
                 NpgsqlDataReader rd = cmd.ExecuteReader();
@@ -167,16 +168,17 @@ namespace wasty
             try
             {
                 conn.Open();
-                sql = @"select * from st_insert(:_waste_type, :_waste_price)";
+                sql = @"select * from insert_waste(:_waste_type, :_waste_price, :_waste_unit)";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_waste_type", tbType.Text);
                 cmd.Parameters.AddWithValue("_waste_price", tbPrice.Text);
+                cmd.Parameters.AddWithValue("_waste_unit", cbUnit.SelectedItem.ToString());
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Data Nasabah Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     ShowDgvWaste();
-                    tbType.Text = tbType.Text = null;
+                    tbType.Text = tbType.Text = cbUnit.Text = null;
                 }
 
             }
@@ -193,6 +195,7 @@ namespace wasty
                 r = dgvWaste.Rows[e.RowIndex];
                 tbType.Text = r.Cells["_waste_type"].Value.ToString();
                 tbPrice.Text = r.Cells["_waste_price"].Value.ToString();
+                cbUnit.Text = r.Cells["_waste_unit"].Value.ToString();
             }
         }
 
@@ -206,17 +209,18 @@ namespace wasty
             try
             {
                 conn.Open();
-                sql = @"select * from st_update(:_waste_id, :_waste_type, :_waste_price)";
+                sql = @"select * from update_waste(:_waste_id, :_waste_type, :_waste_price, :_waste_unit)";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_waste_id", r.Cells["_waste_id"].Value.ToString());
                 cmd.Parameters.AddWithValue("_waste_type", tbType.Text);
                 cmd.Parameters.AddWithValue("_waste_price", tbPrice.Text);
+                cmd.Parameters.AddWithValue("_waste_unit", cbUnit.SelectedItem.ToString());
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Data Nasabah Berhasil Diupdate", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     ShowDgvWaste();
-                    tbType.Text = tbPrice.Text = null;
+                    tbType.Text = tbPrice.Text = cbUnit.Text = null;
                     r = null;
                 }
             }
@@ -240,7 +244,7 @@ namespace wasty
                 try
                 {
                     conn.Open();
-                    sql = @"select * from st_delete(:_waste_id)";
+                    sql = @"select * from delete_waste(:_waste_id)";
                     cmd = new NpgsqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("_waste_id", r.Cells["_waste_id"].Value.ToString());
                     if ((int)cmd.ExecuteScalar() == 1)
