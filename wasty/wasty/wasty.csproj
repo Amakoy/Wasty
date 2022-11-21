@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>wasty-icon-128.ico</ApplicationIcon>
+    <ApplicationIcon>wasty-icon-128-w.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

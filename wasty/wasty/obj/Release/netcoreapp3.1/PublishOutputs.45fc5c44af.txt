@@ -1,0 +1,8 @@
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\wasty.exe
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\wasty.dll
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\wasty.deps.json
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\wasty.runtimeconfig.json
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\wasty.pdb
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\Npgsql.dll
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Raisa Salsabila\Documents\GitHub\Wasty\wasty\wasty\bin\publish\System.Runtime.CompilerServices.Unsafe.dll

@@ -33,8 +33,8 @@ namespace wasty
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.Myprogress = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Myprogress = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -61,17 +61,17 @@ namespace wasty
             this.pbLogo.TabIndex = 35;
             this.pbLogo.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Myprogress
             // 
-            this.Myprogress.ForeColor = System.Drawing.Color.Green;
+            this.Myprogress.ForeColor = System.Drawing.Color.Beige;
             this.Myprogress.Location = new System.Drawing.Point(-2, 643);
             this.Myprogress.Name = "Myprogress";
             this.Myprogress.Size = new System.Drawing.Size(1173, 10);
             this.Myprogress.TabIndex = 36;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Splash
             // 
@@ -96,7 +96,7 @@ namespace wasty
 
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.ProgressBar Myprogress;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar Myprogress;
     }
 }
