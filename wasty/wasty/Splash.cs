@@ -29,9 +29,9 @@ namespace wasty
                 Myprogress.Value = 0;
                 timer1.Stop();
 
-                LoginPage loginPage = new LoginPage();
+                PgPassword pg = new PgPassword();
                 this.Hide();
-                loginPage.Show();
+                pg.Show();
 
             }
         }

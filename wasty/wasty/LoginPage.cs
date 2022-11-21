@@ -12,19 +12,21 @@ namespace wasty
 {
     public partial class LoginPage : Form
     {
-        private string username;
         Admin admin = new Admin();
+        private NpgsqlConnection conn;
+        private string pgPassword;
+        string connstring;
+        private NpgsqlCommand cmd;
+        private string sql = null;
 
-        public LoginPage()
+        public LoginPage(string pgPass)
         {
             InitializeComponent();
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20)); // border radius
-           
+            pgPassword = pgPass;
+            connstring = "Host=localhost;Port=5432;Username=postgres;Password=" + pgPassword + ";Database=wasty";
         }
-        private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
-        private NpgsqlCommand cmd;
-        private string sql = null;
+
 
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] // import untuk border radius
@@ -80,7 +82,7 @@ namespace wasty
                 {
                     //FillAdminInfo();
 
-                    HomePage homePage = new HomePage(tbUsername.Text);
+                    HomePage homePage = new HomePage(tbUsername.Text, pgPassword);
                     homePage.Show();
                     this.Hide();
                 }
@@ -92,7 +94,7 @@ namespace wasty
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Terjadi kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + connstring + ex.Message, "Terjadi kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
         }
@@ -104,6 +106,11 @@ namespace wasty
             {
                 Application.Exit();
             }
+        }
+
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

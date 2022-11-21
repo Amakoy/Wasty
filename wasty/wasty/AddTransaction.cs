@@ -21,9 +21,17 @@ namespace wasty
 
         //database connection
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=raisa10112001;Database=wasty";
+        private string pgPassword;
+        string connstring;
         public static NpgsqlCommand cmd;
         private string sql = null;
+
+        public AddTransaction(string pgPass)
+        {
+            InitializeComponent();
+            pgPassword = pgPass;
+            connstring = "Host=localhost;Port=5432;Username=postgres;Password=" + pgPassword + ";Database=wasty";
+        }
 
         private void AddTransaction_Load(object sender, EventArgs e)
         {
@@ -176,19 +184,19 @@ namespace wasty
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            AddCustomer addCustomer = new AddCustomer();
+            AddCustomer addCustomer = new AddCustomer(pgPassword);
             addCustomer.Show();
             this.Hide();
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            AddWaste addWaste = new AddWaste();
+            AddWaste addWaste = new AddWaste(pgPassword);
             addWaste.Show();
             this.Hide();
         }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ShowRecords showRecords = new ShowRecords();
+            ShowRecords showRecords = new ShowRecords(pgPassword);
             showRecords.Show();
             this.Hide();
         }
