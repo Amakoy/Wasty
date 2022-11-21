@@ -169,11 +169,11 @@ namespace wasty
             // dgvWaste
             // 
             this.dgvWaste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWaste.Location = new System.Drawing.Point(404, 142);
+            this.dgvWaste.Location = new System.Drawing.Point(410, 142);
             this.dgvWaste.Name = "dgvWaste";
             this.dgvWaste.RowHeadersWidth = 51;
             this.dgvWaste.RowTemplate.Height = 29;
-            this.dgvWaste.Size = new System.Drawing.Size(595, 426);
+            this.dgvWaste.Size = new System.Drawing.Size(577, 426);
             this.dgvWaste.TabIndex = 6;
             this.dgvWaste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellClick);
             // 
@@ -222,7 +222,7 @@ namespace wasty
             this.label1.Font = new System.Drawing.Font("Yu Mincho Demibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(56, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 43);
+            this.label1.Size = new System.Drawing.Size(290, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pengelola Sampah";
             // 

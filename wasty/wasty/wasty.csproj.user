@@ -19,5 +19,8 @@
     <Compile Update="ShowRecords.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
