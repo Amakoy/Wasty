@@ -206,6 +206,7 @@ namespace wasty
             this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.mainPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ShowRecords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

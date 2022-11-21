@@ -211,7 +211,7 @@ namespace wasty
             this.tbTotal.MinimumSize = new System.Drawing.Size(390, 36);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.ReadOnly = true;
-            this.tbTotal.Size = new System.Drawing.Size(390, 36);
+            this.tbTotal.Size = new System.Drawing.Size(390, 34);
             this.tbTotal.TabIndex = 4;
             // 
             // lbTanggal
@@ -350,7 +350,7 @@ namespace wasty
             this.lblUnit.MinimumSize = new System.Drawing.Size(390, 36);
             this.lblUnit.Name = "lblUnit";
             this.lblUnit.ReadOnly = true;
-            this.lblUnit.Size = new System.Drawing.Size(390, 36);
+            this.lblUnit.Size = new System.Drawing.Size(390, 34);
             this.lblUnit.TabIndex = 41;
             // 
             // lblUnitPrice
@@ -361,7 +361,7 @@ namespace wasty
             this.lblUnitPrice.MinimumSize = new System.Drawing.Size(390, 36);
             this.lblUnitPrice.Name = "lblUnitPrice";
             this.lblUnitPrice.ReadOnly = true;
-            this.lblUnitPrice.Size = new System.Drawing.Size(390, 36);
+            this.lblUnitPrice.Size = new System.Drawing.Size(390, 34);
             this.lblUnitPrice.TabIndex = 42;
             // 
             // mainPanel
@@ -408,6 +408,7 @@ namespace wasty
             this.ClientSize = new System.Drawing.Size(1152, 605);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.mainPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

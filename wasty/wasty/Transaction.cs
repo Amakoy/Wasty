@@ -28,10 +28,6 @@ namespace wasty
             set { _totalPrice = value; }
         }
 
-        public void AddTransaction(string userName, int amountOfGoods, float totalPrice)
-        {
-
-        }
         // Jika barang dihitung per satuan berat 
         public float CalcPrice(float unitPrice, float wasteWeight)
         {
@@ -46,30 +42,6 @@ namespace wasty
         }
 
 
-        /*        public float CalculatePrice(string wasteType, float wasteWeight)
-                {
-                    float price = WastePrice(wasteType, "weight") * wasteWeight;
-                    return price;
-                }
-
-                public float CalculatePrice(string wasteType, int wasteQty)
-                {
-                    float price = WastePrice(wasteType, "quantity") * wasteQty;
-                    return price;
-                }*/
-
-        /*        private float WastePrice(string wasteType, string weightOrQty)
-                {
-                    if (weightOrQty == "weight")
-                    {
-                        return 0;
-                    }
-
-                    if (weightOrQty == "quantity")
-                    {
-                        return 0;
-                    }
-                    return 0;
-                }*/
+        
     }
 }

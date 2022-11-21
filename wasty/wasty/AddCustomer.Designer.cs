@@ -314,6 +314,7 @@ namespace wasty
             this.Controls.Add(this.lblJudul);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox8);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";

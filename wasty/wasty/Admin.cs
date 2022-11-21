@@ -11,7 +11,11 @@ namespace wasty
         private string _password;
         private string _fullName;
         private string _email;
-
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
         public string AccountID {
             get { return _accountID; }
             set { _accountID = value; } 
@@ -31,33 +35,6 @@ namespace wasty
             get { return _fullName; }
             set { _fullName = value; }
         }
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
 
-        //methods
-        public void ShowCustomer()
-        {
-            
-        }
-        public void AddCustomer()
-        {
-            // nama, email, nohp
-        }
-        public void RemoveCustomer()
-        {
-
-        }
-        public void UpdateCustomer()
-        {
-
-        }
-
-        public void ShowRecords()
-        {
-
-        }
     }
 }

@@ -47,7 +47,7 @@ namespace wasty
             this.tbUsername.MinimumSize = new System.Drawing.Size(450, 40);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PlaceholderText = "Email";
-            this.tbUsername.Size = new System.Drawing.Size(450, 40);
+            this.tbUsername.Size = new System.Drawing.Size(450, 31);
             this.tbUsername.TabIndex = 20;
             // 
             // btnLogin
@@ -72,7 +72,7 @@ namespace wasty
             this.tbPassword.MinimumSize = new System.Drawing.Size(450, 40);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PlaceholderText = "Password";
-            this.tbPassword.Size = new System.Drawing.Size(450, 40);
+            this.tbPassword.Size = new System.Drawing.Size(450, 31);
             this.tbPassword.TabIndex = 11;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
@@ -108,6 +108,7 @@ namespace wasty
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";

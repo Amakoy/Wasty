@@ -26,21 +26,5 @@ namespace wasty
             set { _wastePrice = value; }
         }
 
-        public void AddWaste(string wasteType, float wastePrice)
-        {
-
-        }
-        public void ShowWasteList()
-        {
-
-        }
-        public void DeleteWaste()
-        {
-
-        }
-        public void UpdateList()
-        {
-
-        }
     }
 }
