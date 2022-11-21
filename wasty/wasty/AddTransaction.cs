@@ -197,6 +197,30 @@ namespace wasty
         {
 
         }
+        //panel border
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel1.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel3.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel4.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
     }
     
 }

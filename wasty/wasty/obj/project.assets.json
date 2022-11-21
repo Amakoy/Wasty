@@ -163,11 +163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raisa Salsabila\\Documents\\Vallen GitHub\\Wasty\\wasty\\wasty\\wasty.csproj",
+      "projectUniqueName": "C:\\Users\\Raisa Salsabila\\Documents\\GitHub\\Wasty\\wasty\\wasty\\wasty.csproj",
       "projectName": "wasty",
-      "projectPath": "C:\\Users\\Raisa Salsabila\\Documents\\Vallen GitHub\\Wasty\\wasty\\wasty\\wasty.csproj",
+      "projectPath": "C:\\Users\\Raisa Salsabila\\Documents\\GitHub\\Wasty\\wasty\\wasty\\wasty.csproj",
       "packagesPath": "C:\\Users\\Raisa Salsabila\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raisa Salsabila\\Documents\\Vallen GitHub\\Wasty\\wasty\\wasty\\obj\\",
+      "outputPath": "C:\\Users\\Raisa Salsabila\\Documents\\GitHub\\Wasty\\wasty\\wasty\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raisa Salsabila\\AppData\\Roaming\\NuGet\\NuGet.Config",

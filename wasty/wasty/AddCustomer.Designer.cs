@@ -50,6 +50,7 @@ namespace wasty
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -60,6 +61,7 @@ namespace wasty
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,10 +80,11 @@ namespace wasty
             // 
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(-7, 360);
+            this.panel4.Location = new System.Drawing.Point(-7, 387);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(117, 84);
             this.panel4.TabIndex = 14;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox4
             // 
@@ -98,10 +101,11 @@ namespace wasty
             // 
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(-7, 277);
+            this.panel3.Location = new System.Drawing.Point(-7, 304);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(117, 84);
             this.panel3.TabIndex = 13;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox3
             // 
@@ -118,10 +122,11 @@ namespace wasty
             // 
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(-7, 194);
+            this.panel2.Location = new System.Drawing.Point(-7, 221);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(117, 84);
             this.panel2.TabIndex = 12;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox2
             // 
@@ -138,10 +143,11 @@ namespace wasty
             // 
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(-7, 111);
+            this.panel5.Location = new System.Drawing.Point(-7, 138);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 84);
             this.panel5.TabIndex = 11;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // pictureBox1
             // 
@@ -157,16 +163,18 @@ namespace wasty
             // lblJudul
             // 
             this.lblJudul.AutoSize = true;
+            this.lblJudul.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblJudul.Font = new System.Drawing.Font("Yu Mincho Demibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul.Location = new System.Drawing.Point(457, 53);
+            this.lblJudul.Location = new System.Drawing.Point(158, 63);
             this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(310, 43);
+            this.lblJudul.Size = new System.Drawing.Size(299, 42);
             this.lblJudul.TabIndex = 2;
             this.lblJudul.Text = "Pengelola Nasabah";
             // 
             // lblHp
             // 
             this.lblHp.AutoSize = true;
+            this.lblHp.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblHp.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHp.Location = new System.Drawing.Point(158, 235);
             this.lblHp.Name = "lblHp";
@@ -177,6 +185,7 @@ namespace wasty
             // lblJenis
             // 
             this.lblJenis.AutoSize = true;
+            this.lblJenis.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblJenis.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblJenis.Location = new System.Drawing.Point(158, 313);
             this.lblJenis.Name = "lblJenis";
@@ -187,6 +196,7 @@ namespace wasty
             // lblNama
             // 
             this.lblNama.AutoSize = true;
+            this.lblNama.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblNama.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNama.Location = new System.Drawing.Point(158, 159);
             this.lblNama.Name = "lblNama";
@@ -275,6 +285,16 @@ namespace wasty
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(2, -1);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(1148, 607);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 33;
+            this.pictureBox8.TabStop = false;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -293,6 +313,7 @@ namespace wasty
             this.Controls.Add(this.lblNama);
             this.Controls.Add(this.lblJudul);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox8);
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";
@@ -308,6 +329,7 @@ namespace wasty
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +357,6 @@ namespace wasty
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

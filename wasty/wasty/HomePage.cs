@@ -51,8 +51,9 @@ namespace wasty
             lblAdmEmail.Text = username;
             FillAdminInfo();
 
-            // admin panel style
+            // style
             adminPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, adminPanel.Width, adminPanel.Height, 45, 45));
+            pbLogo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pbLogo.Width, pbLogo.Height, 45, 45));
         }
         private void FillAdminInfo()
         {
@@ -113,6 +114,36 @@ namespace wasty
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel9.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel8.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel7.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel6.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel5.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
         }
     }
 }

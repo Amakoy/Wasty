@@ -43,6 +43,7 @@ namespace wasty
             this.tbType = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,7 @@ namespace wasty
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWaste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidePanel.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -81,6 +83,7 @@ namespace wasty
             this.mainPanel.Controls.Add(this.tbType);
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Controls.Add(this.label1);
+            this.mainPanel.Controls.Add(this.pictureBox8);
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mainPanel.Location = new System.Drawing.Point(109, 0);
             this.mainPanel.Name = "mainPanel";
@@ -94,18 +97,19 @@ namespace wasty
             this.cbUnit.Items.AddRange(new object[] {
             "Berat",
             "Buah"});
-            this.cbUnit.Location = new System.Drawing.Point(46, 289);
+            this.cbUnit.Location = new System.Drawing.Point(54, 273);
             this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(275, 36);
+            this.cbUnit.Size = new System.Drawing.Size(303, 36);
             this.cbUnit.TabIndex = 31;
             // 
             // lblWasteUnit
             // 
             this.lblWasteUnit.AutoSize = true;
-            this.lblWasteUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblWasteUnit.Location = new System.Drawing.Point(46, 245);
+            this.lblWasteUnit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblWasteUnit.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWasteUnit.Location = new System.Drawing.Point(54, 242);
             this.lblWasteUnit.Name = "lblWasteUnit";
-            this.lblWasteUnit.Size = new System.Drawing.Size(94, 35);
+            this.lblWasteUnit.Size = new System.Drawing.Size(62, 22);
             this.lblWasteUnit.TabIndex = 30;
             this.lblWasteUnit.Text = "Satuan";
             // 
@@ -115,9 +119,9 @@ namespace wasty
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(243, 451);
+            this.btnDelete.Location = new System.Drawing.Point(262, 425);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(78, 40);
+            this.btnDelete.Size = new System.Drawing.Size(95, 40);
             this.btnDelete.TabIndex = 28;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -129,7 +133,7 @@ namespace wasty
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(46, 451);
+            this.btnAdd.Location = new System.Drawing.Point(54, 425);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(95, 40);
             this.btnAdd.TabIndex = 29;
@@ -143,7 +147,7 @@ namespace wasty
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(145, 451);
+            this.btnUpdate.Location = new System.Drawing.Point(157, 425);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(95, 40);
             this.btnUpdate.TabIndex = 27;
@@ -165,59 +169,72 @@ namespace wasty
             // dgvWaste
             // 
             this.dgvWaste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWaste.Location = new System.Drawing.Point(374, 142);
+            this.dgvWaste.Location = new System.Drawing.Point(404, 142);
             this.dgvWaste.Name = "dgvWaste";
             this.dgvWaste.RowHeadersWidth = 51;
             this.dgvWaste.RowTemplate.Height = 29;
-            this.dgvWaste.Size = new System.Drawing.Size(625, 426);
+            this.dgvWaste.Size = new System.Drawing.Size(595, 426);
             this.dgvWaste.TabIndex = 6;
             this.dgvWaste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWaste_CellClick);
             // 
             // tbPrice
             // 
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPrice.Location = new System.Drawing.Point(46, 395);
+            this.tbPrice.Location = new System.Drawing.Point(54, 358);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(275, 34);
+            this.tbPrice.Size = new System.Drawing.Size(303, 34);
             this.tbPrice.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(46, 348);
+            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(54, 326);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 35);
+            this.label3.Size = new System.Drawing.Size(138, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Harga per satuan";
             // 
             // tbType
             // 
             this.tbType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbType.Location = new System.Drawing.Point(46, 192);
+            this.tbType.Location = new System.Drawing.Point(54, 192);
             this.tbType.Name = "tbType";
-            this.tbType.Size = new System.Drawing.Size(275, 34);
+            this.tbType.Size = new System.Drawing.Size(303, 34);
             this.tbType.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(46, 142);
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(54, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 35);
+            this.label2.Size = new System.Drawing.Size(110, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Jenis Sampah";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(407, 35);
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Font = new System.Drawing.Font("Yu Mincho Demibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(56, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 45);
+            this.label1.Size = new System.Drawing.Size(301, 43);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sampah";
+            this.label1.Text = "Pengelola Sampah";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(-108, -1);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(1148, 607);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 32;
+            this.pictureBox8.TabStop = false;
             // 
             // sidePanel
             // 
@@ -235,7 +252,7 @@ namespace wasty
             // 
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(-7, 339);
+            this.panel4.Location = new System.Drawing.Point(-6, 392);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(117, 84);
             this.panel4.TabIndex = 10;
@@ -256,7 +273,7 @@ namespace wasty
             // 
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(-7, 256);
+            this.panel3.Location = new System.Drawing.Point(-6, 309);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(117, 84);
             this.panel3.TabIndex = 9;
@@ -277,7 +294,7 @@ namespace wasty
             // 
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(-7, 173);
+            this.panel2.Location = new System.Drawing.Point(-6, 226);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(117, 84);
             this.panel2.TabIndex = 8;
@@ -298,7 +315,7 @@ namespace wasty
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(-7, 90);
+            this.panel1.Location = new System.Drawing.Point(-6, 143);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 84);
             this.panel1.TabIndex = 7;
@@ -330,6 +347,7 @@ namespace wasty
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWaste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.sidePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -367,5 +385,6 @@ namespace wasty
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblWasteUnit;
         private System.Windows.Forms.ComboBox cbUnit;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

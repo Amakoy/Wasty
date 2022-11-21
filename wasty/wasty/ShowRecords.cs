@@ -82,6 +82,29 @@ namespace wasty
             addWaste.Show();
             this.Hide();
         }
+        //panelborder
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel5.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
 
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel8.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel7.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            // panel border
+            ControlPaint.DrawBorder(e.Graphics, this.panel6.ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+        }
     }
 }

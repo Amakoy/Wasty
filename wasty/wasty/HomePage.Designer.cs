@@ -46,7 +46,8 @@ namespace wasty
             this.lblAdmEmail = new System.Windows.Forms.Label();
             this.lblAdmName = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -60,7 +61,8 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.adminPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,6 +87,7 @@ namespace wasty
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(117, 84);
             this.panel9.TabIndex = 16;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // pictureBox5
             // 
@@ -105,6 +108,7 @@ namespace wasty
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 84);
             this.panel5.TabIndex = 18;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // pictureBox4
             // 
@@ -125,6 +129,7 @@ namespace wasty
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(117, 84);
             this.panel6.TabIndex = 17;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // pictureBox3
             // 
@@ -145,6 +150,7 @@ namespace wasty
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(117, 84);
             this.panel7.TabIndex = 16;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pictureBox1
             // 
@@ -165,6 +171,7 @@ namespace wasty
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(117, 84);
             this.panel8.TabIndex = 15;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pictureBox2
             // 
@@ -185,9 +192,9 @@ namespace wasty
             this.adminPanel.Controls.Add(this.lblAdmName);
             this.adminPanel.Controls.Add(this.pictureBox6);
             this.adminPanel.ForeColor = System.Drawing.Color.White;
-            this.adminPanel.Location = new System.Drawing.Point(179, 227);
+            this.adminPanel.Location = new System.Drawing.Point(395, 221);
             this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(715, 255);
+            this.adminPanel.Size = new System.Drawing.Size(629, 210);
             this.adminPanel.TabIndex = 2;
             // 
             // lblActiveAdm
@@ -206,7 +213,7 @@ namespace wasty
             this.lblAdmEmail.AutoSize = true;
             this.lblAdmEmail.Font = new System.Drawing.Font("Yu Mincho", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAdmEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblAdmEmail.Location = new System.Drawing.Point(219, 131);
+            this.lblAdmEmail.Location = new System.Drawing.Point(198, 119);
             this.lblAdmEmail.Name = "lblAdmEmail";
             this.lblAdmEmail.Size = new System.Drawing.Size(108, 22);
             this.lblAdmEmail.TabIndex = 5;
@@ -217,7 +224,7 @@ namespace wasty
             this.lblAdmName.AutoSize = true;
             this.lblAdmName.Font = new System.Drawing.Font("Yu Mincho Demibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAdmName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblAdmName.Location = new System.Drawing.Point(214, 88);
+            this.lblAdmName.Location = new System.Drawing.Point(193, 76);
             this.lblAdmName.Name = "lblAdmName";
             this.lblAdmName.Size = new System.Drawing.Size(201, 38);
             this.lblAdmName.TabIndex = 4;
@@ -226,21 +233,33 @@ namespace wasty
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(33, 74);
+            this.pictureBox6.Location = new System.Drawing.Point(50, 60);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox6.Size = new System.Drawing.Size(110, 109);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox7
+            // pictureBox8
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(179, 89);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(372, 112);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(2, -1);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(1148, 607);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(182, 221);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(200, 210);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 9;
+            this.pbLogo.TabStop = false;
             // 
             // HomePage
             // 
@@ -248,9 +267,10 @@ namespace wasty
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1152, 605);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.adminPanel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox8);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
@@ -270,7 +290,8 @@ namespace wasty
             this.adminPanel.ResumeLayout(false);
             this.adminPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,6 +314,7 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lblAdmEmail;
         private System.Windows.Forms.Label lblActiveAdm;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

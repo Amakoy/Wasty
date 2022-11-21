@@ -54,10 +54,11 @@ namespace wasty
             tbPassword.BorderStyle = BorderStyle.None;
             tbPassword.AutoSize = false;
 
-            //Login
-            //lblUser.Text = lblUser.Text + username;
             conn = new NpgsqlConnection(connstring);
-           
+
+            //style logo
+            pbLogo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pbLogo.Width, pbLogo.Height, 45, 45));
+
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {

@@ -42,6 +42,7 @@ namespace wasty
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.lblAddSampah = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.sidePanel.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -53,6 +54,7 @@ namespace wasty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -72,10 +74,11 @@ namespace wasty
             // 
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(-6, 116);
+            this.panel5.Location = new System.Drawing.Point(-6, 131);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 84);
             this.panel5.TabIndex = 22;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // pictureBox4
             // 
@@ -92,10 +95,11 @@ namespace wasty
             // 
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(-6, 365);
+            this.panel6.Location = new System.Drawing.Point(-6, 380);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(117, 84);
             this.panel6.TabIndex = 21;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // pictureBox3
             // 
@@ -112,10 +116,11 @@ namespace wasty
             // 
             this.panel7.Controls.Add(this.pictureBox1);
             this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(-6, 282);
+            this.panel7.Location = new System.Drawing.Point(-6, 297);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(117, 84);
             this.panel7.TabIndex = 20;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pictureBox1
             // 
@@ -132,10 +137,11 @@ namespace wasty
             // 
             this.panel8.Controls.Add(this.pictureBox2);
             this.panel8.ForeColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(-6, 199);
+            this.panel8.Location = new System.Drawing.Point(-6, 214);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(117, 84);
             this.panel8.TabIndex = 19;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pictureBox2
             // 
@@ -153,6 +159,7 @@ namespace wasty
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(234)))), ((int)(((byte)(212)))));
             this.mainPanel.Controls.Add(this.dgvRecords);
             this.mainPanel.Controls.Add(this.lblAddSampah);
+            this.mainPanel.Controls.Add(this.pictureBox8);
             this.mainPanel.Location = new System.Drawing.Point(104, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
@@ -167,12 +174,13 @@ namespace wasty
             this.dgvRecords.Name = "dgvRecords";
             this.dgvRecords.RowHeadersWidth = 62;
             this.dgvRecords.RowTemplate.Height = 33;
-            this.dgvRecords.Size = new System.Drawing.Size(689, 455);
+            this.dgvRecords.Size = new System.Drawing.Size(689, 402);
             this.dgvRecords.TabIndex = 13;
             // 
             // lblAddSampah
             // 
             this.lblAddSampah.AutoSize = true;
+            this.lblAddSampah.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblAddSampah.Font = new System.Drawing.Font("Yu Mincho Demibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAddSampah.Location = new System.Drawing.Point(335, 39);
             this.lblAddSampah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -180,6 +188,16 @@ namespace wasty
             this.lblAddSampah.Size = new System.Drawing.Size(312, 47);
             this.lblAddSampah.TabIndex = 12;
             this.lblAddSampah.Text = "Record Transaksi";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(-104, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(1148, 607);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
             // 
             // ShowRecords
             // 
@@ -206,6 +224,7 @@ namespace wasty
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,5 +243,6 @@ namespace wasty
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
